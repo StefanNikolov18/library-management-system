@@ -1,0 +1,14 @@
+Admin|Papa|Francisk123|1.1.2020|10.6.2025|@.
+Admin|Georgia|gogi123|1.1.1900|5.3.2025|@.
+Admin|Stefan|stefanN123|1.1.1900|23.6.2025|@.
+Admin|Ceco|lele|1.4.2024|2.3.2025|@.
+Reader|Anton|tonkata123|1.1.2000|1.1.2000|0
+Reader|Hugo|pass12345|1.1.1900|23.6.2025|4|Book|3|The Great Gatsby|Scribner|4.4|A tragic love story set in the 1920s.|5|F. Scott Fitzgerald|1925|classic,love,wealth|978-0743273565
+1.1.1900|15.1.1900|Book|1|Frankenstein|Lackington, Hughes|4.3|A scientist creates a living monster.|4|Mary Shelley|1900|horror,science,morality|978-0486282114
+23.6.2025|7.7.2025|Book|-1|A Tale of Two Cities|Chapman & Hall|4.5|Story set during the French Revolution.|4|Charles Dickens|1900|revolution,history,sacrifice|978-0486406510
+23.6.2025|7.7.2025|Book|-1|Wuthering Heights|Thomas Cautley Newby|4.2|Dark love and revenge on the moors.|5|Emily Brontë|1900|gothic,revenge,romance|978-0141439556
+23.6.2025|7.7.2025
+Reader|Stoqn|stoqn123|1.1.1900|1.1.1900|1|Book|6|Brave New World|Chatto & Windus|4.5|A futuristic society controlled by science.|5|Aldous Huxley|1932|dystopia,science,society|978-0060850524
+1.1.1900|15.1.1900
+Admin|Petyr|hoho123|23.6.2025|23.6.2025|@.
+Reader|Melisa|meli123|20.6.2025|18.6.2025|0

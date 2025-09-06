@@ -1,0 +1,84 @@
+Book|0|The Hobbit|HarperCollins|6|A fantasy novel about a hobbit's adventure.|5|J.R.R. Tolkien|1937|fantasy,adventure,classic|978-0261103344
+Periodical|3|Science|National Geographic|6.4|Monthly science magazine|10|2024|6|42|2|The Sun|John Doe|astronomy,star,space|Mars Mission|Jane Smith|mars,exploration,NASA|N/A
+Book|1|1984|Secker & Warburg|4.7|Dystopian novel about totalitarian society.|10|George Orwell|1949|dystopia,politics,future|978-0451524935
+Book|2|To Kill a Mockingbird|J.B. Lippincott & Co.|4.9|Classic about racism and justice.|7|Harper Lee|1960|classic,justice,racism|978-0061120084
+Book|2|To Kill a Mockingbird|J.B. Lippincott & Co.|4.9|Classic about racism and justice.|7|Harper Lee|1960|classic,justice,racism|978-0061120084
+Book|2|To Kill a Mockingbird|J.B. Lippincott & Co.|4.9|Classic about racism and justice.|7|Harper Lee|1960|classic,justice,racism|978-0061120084
+Book|3|The Great Gatsby|Scribner|4.4|A tragic love story set in the 1920s.|8|F. Scott Fitzgerald|1925|classic,love,wealth|978-0743273565
+Book|4|Pride and Prejudice|T. Egerton|4.6|Romantic novel about manners and marriage.|12|Jane Austen|1900|romance,society,class|978-1503290563
+Book|5|The Catcher in the Rye|Little, Brown and Company|4.2|A teenager's view of adult world.|9|J.D. Salinger|1951|teenage,isolation,rebel|N/A
+Book|6|Brave New World|Chatto & Windus|4.5|A futuristic society controlled by science.|6|Aldous Huxley|1932|dystopia,science,society|978-0060850524
+Book|-1|Moby Dick|Harper & Brothers|4.1|Quest for a giant whale.|4|Herman Melville|1900|sea,revenge,classic|N/A
+Book|4|War and Peace|The Russian Messenger|4.8|Historical novel set during Napoleon’s invasion.|3|Leo Tolstoy|1900|war,history,russia|978-1853260629
+Periodical|3|Sports|Champion Weekly|4.6|Sports news|18|2023|11|38|1|Football Highlights|Ian Red|football,sports|4567-8901
+Periodical|3|Nature|Wildlife Today|4.4|Nature and animals|14|2025|2|35|2|Rainforest Secrets|Liam Green|nature,rainforest|Ocean Life|Mia Blue|marine,animals|6789-0123
+Book|3|Jane Eyre|Smith, Elder & Co.|4.5|A woman's journey to independence.|6|Charlotte Brontë|1900|romance,gothic,feminism|978-0142437209
+Book|1|Crime and Punishment|The Russian Messenger|4.7|A man wrestles with guilt after murder.|5|Fyodor Dostoevsky|1900|crime,psychology,redemption|N/A
+Book|-1|The Lord of the Rings|Allen & Unwin|4.9|Epic fantasy journey to destroy a ring.|15|J.R.R. Tolkien|1954|fantasy,epic,friendship|978-0618640157
+Book|1|Frankenstein|Lackington, Hughes|4.3|A scientist creates a living monster.|4|Mary Shelley|1900|horror,science,morality|978-0486282114
+Book|3|Dracula|Archibald Constable and Company|4.2|Vampire horror novel.|6|Bram Stoker|1900|horror,vampire,gothic|978-0486411095
+Book|5|The Alchemist|HarperTorch|4.4|A journey to fulfill one's personal legend.|7|Paulo Coelho|1988|philosophy,dreams,inspiration|978-0061122415
+Book|1|Animal Farm|Secker & Warburg|4.6|Political satire in the form of a fable.|10|George Orwell|1945|satire,politics,allegory|N/A
+Book|-1|The Odyssey|Ancient Greece|4.7|A hero’s long journey home.|5|Homer|1900|mythology,epic,adventure|978-0140268867
+Book|-1|Don Quixote|Francisco de Robles|4.3|A man becomes a knight-errant.|4|Miguel de Cervantes|1900|satire,adventure,classic|978-0060934347
+Book|5|Les Misérables|A. Lacroix|4.6|Redemption and justice in post-revolutionary France.|5|Victor Hugo|1900|justice,poverty,france|N/A
+Periodical|3|Science|National Geographic|4.5|Monthly science magazine|10|2024|6|42|2|The Sun|John Doe|astronomy,star,space|Mars Mission|Jane Smith|mars,exploration,NASA|1234-5678
+Periodical|3|Health|Medical Weekly|4|Latest medical news|15|2025|1|30|1|Healthy Living|Alice Green|nutrition,wellness,diet|5678-1234
+Periodical|3|Tech|Tech Today|4.7|Technology updates|20|2023|12|50|3|AI Revolution|Bob Brown|AI,ML,robots|Quantum Computing|Carol White|quantum,computers|Cybersecurity|Dan Black|security,privacy|8765-4321
+Book|-1|The Picture of Dorian Gray|Ward, Lock & Co.|4.4|A man who never ages.|6|Oscar Wilde|1900|morality,beauty,corruption|978-0141439570
+Book|-1|A Tale of Two Cities|Chapman & Hall|4.5|Story set during the French Revolution.|4|Charles Dickens|1900|revolution,history,sacrifice|978-0486406510
+Book|-1|Wuthering Heights|Thomas Cautley Newby|4.2|Dark love and revenge on the moors.|5|Emily Brontë|1900|gothic,revenge,romance|978-0141439556
+Book|-1|The Brothers Karamazov|The Russian Messenger|4.7|Philosophical tale of morality and family.|4|Fyodor Dostoevsky|1900|faith,philosophy,crime|N/A
+Book|-1|Ulysses|Shakespeare and Company|4.1|One day in Dublin told in experimental style.|3|James Joyce|1922|streamofconsciousness,ireland,modernism|978-1840226355
+Book|-1|The Divine Comedy|Italy|4.9|Journey through Hell, Purgatory and Paradise.|4|Dante Alighieri|1900|religion,allegory,poetry|N/A
+Book|-1|Fahrenheit 451|Ballantine Books|4.6|Future society where books are banned.|7|Ray Bradbury|1953|dystopia,books,censorship|978-1451673319
+Book|-1|The Stranger|Gallimard|4.4|Existential story of a detached man.|4|Albert Camus|1942|existentialism,absurdism,murder|978-0679720201
+Book|-1|The Metamorphosis|Kurt Wolff Verlag|4.3|A man turns into an insect.|3|Franz Kafka|1915|absurdism,transformation,isolation|N/A
+Book|-1|The Old Man and the Sea|Charles Scribner's Sons|4.5|Struggle between man and nature.|6|Ernest Hemingway|1952|fishing,strength,perseverance|978-0684801223
+Book|-1|Catch-22|Simon & Schuster|4.3|Absurdity of war through satire.|4|Joseph Heller|1961|war,satire,paradox|978-1451626650
+Book|-1|The Sun Also Rises|Scribner|4.2|Expats searching for meaning after WWI.|5|Ernest Hemingway|1926|identity,war,love|N/A
+Book|-1|Beloved|Alfred A. Knopf|4.4|Haunting story of a former slave.|4|Toni Morrison|1987|slavery,haunting,motherhood|978-1400033416
+Book|-1|A Clockwork Orange|Heinemann|4.1|Dystopian youth violence and reform.|3|Anthony Burgess|1962|violence,dystopia,morality|978-0393312836
+Book|-1|Slaughterhouse-Five|Delacorte|4.5|WWII and time travel tale.|5|Kurt Vonnegut|1969|war,sciencefiction,satire|978-0385333849
+Book|-1|Lolita|Olympia Press|4.2|Controversial story of obsession.|3|Vladimir Nabokov|1955|obsession,taboo,love|N/A
+Book|-1|Rebecca|Victor Gollancz Ltd|4.3|A new bride haunted by the past.|4|Daphne du Maurier|1938|gothic,suspense,mystery|978-0380730407
+Book|-1|The Trial|Verlag Die Schmiede|4.3|Man arrested for unknown crime.|3|Franz Kafka|1925|law,absurdism,nightmare|978-0805209990
+Book|-1|A Farewell to Arms|Scribner|4.2|Romance during World War I.|4|Ernest Hemingway|1929|war,love,tragedy|N/A
+Book|-1|Invisible Man|Random House|4.4|African American man's struggle for identity.|5|Ralph Ellison|1952|identity,race,invisibility|978-0679732761
+Book|-1|The Sound and the Fury|Cape & Smith|4.1|Fragmented Southern family tale.|3|William Faulkner|1929|south,time,memory|978-0679732242
+Book|-1|Of Mice and Men|Covici Friede|4.5|Two migrant workers and their dreams.|6|John Steinbeck|1937|dreams,friendship,tragedy|978-0140177398
+Book|-1|The Grapes of Wrath|The Viking Press|4.6|Dust Bowl family's journey to California.|4|John Steinbeck|1939|poverty,hope,migration|N/A
+Book|-1|Gone with the Wind|Macmillan|4.7|Civil War era Southern epic.|5|Margaret Mitchell|1936|civilwar,love,survival|978-1416548942
+Book|-1|The Call of the Wild|Macmillan|4.4|Dog's survival in the Yukon.|4|Jack London|1903|dog,survival,wilderness|978-0451531346
+Book|-1|White Fang|Macmillan|4.3|Wolf-dog's story of taming and trust.|3|Jack London|1906|wolf,nature,trust|N/A
+Book|-1|The Time Machine|Heinemann|4.2|Man travels far into the future.|4|H.G. Wells|1900|time,sciencefiction,future|978-0451528551
+Book|-1|The War of the Worlds|Heinemann|4.3|Martian invasion of Earth.|5|H.G. Wells|1900|aliens,war,survival|978-0553213381
+Book|-1|Treasure Island|Cassell & Co.|4.4|Young boy goes on pirate adventure.|5|Robert Louis Stevenson|1900|pirates,treasure,island|978-0486275598
+Periodical|3|Travel|Explorer Magazine|4.2|Travel and adventure|8|2024|7|25|2|Hidden Beaches|Eve Blue|travel,beaches|Mountain Trails|Frank Gray|hiking,mountains|2345-6789
+Periodical|3|Cooking|Gourmet Monthly|4.3|Delicious recipes|12|2025|3|40|2|Summer Salads|Grace Yellow|cooking,salads|Baking Tips|Hank Orange|baking,desserts|3456-7890
+Book|-1|Journey to the Center of the Earth|Pierre-Jules Hetzel|4.5|Science fiction underground adventure.|4|Jules Verne|1900|adventure,sciencefiction,earth|N/A
+Book|-1|Twenty Thousand Leagues Under the Sea|Pierre-Jules Hetzel|4.6|Captain Nemo’s ocean voyage.|3|Jules Verne|1900|ocean,adventure,technology|978-0553212520
+Book|-1|Gone with the Wind|Macmillan|4.7|Civil War era Southern epic.|5|Margaret Mitchell|1936|civilwar,love,survival|978-1416548942
+Book|-1|The Call of the Wild|Macmillan|4.4|Dog's survival in the Yukon.|4|Jack London|1903|dog,survival,wilderness|978-0451531346
+Book|-1|White Fang|Macmillan|4.3|Wolf-dog's story of taming and trust.|3|Jack London|1906|wolf,nature,trust|N/A
+Periodical|3|Education|Learn Weekly|4|Educational insights|11|2023|10|33|1|STEM Focus|Nina White|education,STEM|7890-1234
+Periodical|3|History|Past Times|4.5|Historical articles|16|2024|8|45|2|Ancient Civilizations|Owen Brown|history,ancient|World Wars|Paula Black|history,war|8901-2345
+Periodical|3|Business|Market Insider|4.7|Business news|20|2025|4|50|3|Stock Market|Quinn Gray|business,stocks|Startups|Rose Pink|entrepreneurship|Economy|Sam Blue|finance,economy|9012-3456
+Periodical|3|Art|Creative Monthly|4.3|Art and culture|10|2023|9|30|1|Modern Art|Tina Yellow|art,modern|0123-4567
+Periodical|3|Science|Space Review|4.6|Space exploration|15|2024|6|40|2|Mars Colonization|Uma Red|space,mars|Exoplanets|Vic Black|space,planets|1234-5678
+Periodical|3|Music|Sound Wave|4.2|Music industry|13|2025|7|36|2|Jazz Revival|Will Green|music,jazz|Pop Hits|Xena Blue|music,pop|2345-6789
+Periodical|3|Gardening|Green Thumb|4.1|Gardening tips|9|2023|5|25|1|Spring Flowers|Yara Pink|gardening,flowers|3456-7890
+Book|-1|The Time Machine|Heinemann|4.2|Man travels far into the future.|4|H.G. Wells|1900|time,sciencefiction,future|978-0451528551
+Book|-1|The War of the Worlds|Heinemann|4.3|Martian invasion of Earth.|5|H.G. Wells|1900|aliens,war,survival|978-0553213381
+Book|-1|Treasure Island|Cassell & Co.|4.4|Young boy goes on pirate adventure.|5|Robert Louis Stevenson|1900|pirates,treasure,island|978-0486275598
+Book|-1|Journey to the Center of the Earth|Pierre-Jules Hetzel|4.5|Science fiction underground adventure.|4|Jules Verne|1900|adventure,sciencefiction,earth|N/A
+Book|-1|Twenty Thousand Leagues Under the Sea|Pierre-Jules Hetzel|4.6|Captain Nemo’s ocean voyage.|4|Jules Verne|1900|ocean,adventure,technology|978-0553212520
+Periodical|3|Photography|Shutter Bug|4.4|Photography techniques|12|2024|10|28|2|Landscape Shots|Zack White|photography,landscape|Portraits|Amy Black|photography,portrait|4567-8901
+Periodical|3|Cinema|Film Focus|4.5|Movie reviews|17|2025|3|42|2|Indie Films|Ben Orange|cinema,indie|Blockbusters|Clara Violet|cinema,blockbuster|5678-9012
+Periodical|3|Politics|Global Affairs|4|Political analysis|14|2023|11|33|1|Election Coverage|Derek Red|politics,elections|6789-0123
+Periodical|3|Literature|Book Review|4.3|Literary critiques|11|2024|8|30|2|New Novels|Eva Green|literature,novels|Poetry|Frank Blue|literature,poetry|7890-1234
+Periodical|3|Economy|Finance Today|4.6|Economic trends|19|2025|2|48|3|Global Markets|Gina White|economy,markets|Cryptocurrency|Hank Black|crypto,finance|Real Estate|Ivy Pink|economy,realestate|8901-2345
+Book|5|Les Misérables|A. Lacroix|4.6|Redemption and justice in post-revolutionary France.|5|Victor Hugo|1900|justice,poverty,france|N/A
+Book|2|To Kill a Mockingbird|J.B. Lippincott & Co.|4.9|Classic about racism and justice.|6|Harper Lee|1960|classic,justice,racism|978-0061120084
+Series|0|Seria|F2|8|good and enjoyable|19|Steven|2020|jill,wew,wew|N/A|2020|3|93|1|List|nz|ja|987-123440-1
+Series|2|Prodigy|proBic|4|a story about someone|3|Jeff biff|2009|jeff,twist,set,side|098-456|2009|9|567|2|Pro|Jeff|pro in proigy|Noob|jiff|noob in noobigy|N/A
