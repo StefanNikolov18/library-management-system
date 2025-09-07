@@ -1,0 +1,368 @@
+\doxysection{Series Class Reference}
+\hypertarget{class_series}{}\label{class_series}\index{Series@{Series}}
+
+
+Represents a series as a derived class from both \doxylink{class_book}{Book} and \doxylink{class_periodical}{Periodical}.  
+
+
+
+
+{\ttfamily \#include $<$Series.\+h$>$}
+
+Inheritance diagram for Series\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_series}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_series_a523c6bfefb74dfcacf6dccdf2aba329b}\label{class_series_a523c6bfefb74dfcacf6dccdf2aba329b} 
+{\bfseries Series} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_series_ac53b5c0690d94083441128ab8204c64d}{Series}} (const GENRE \&\mbox{\hyperlink{class_library_item_a544c5eb1ad563ea2709357cd49d043ae}{genre}}, const std\+::string \&\mbox{\hyperlink{class_library_item_acbba38b55499d77ccd35de6250d684b4}{title}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a13989a7903c1b0ee9e0fd0e27eadcf78}{publisher}}, double \mbox{\hyperlink{class_library_item_a8882dadbcfc1e4917081042b48221f19}{rating}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a3916b248f64f4140d8158dc769c335f5}{description}}, const size\+\_\+t copies\+Count, const std\+::string \&\mbox{\hyperlink{class_book_a7e1f0966c227ccaaf8e76fa56226888f}{author}}, const unsigned \mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}}, const std\+::string \&\mbox{\hyperlink{class_book_a8ef7c988860be17bf51c245ae8b4cf34}{keywords}}, const std\+::string \&\mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}}, const \mbox{\hyperlink{struct_year_and_month}{Year\+And\+Month}} \&\mbox{\hyperlink{class_periodical_a5af70126c21b91b6ecfac1a2ca195d2e}{date}}, const size\+\_\+t \mbox{\hyperlink{class_periodical_a0462e5657eda22089b4dff3417c62909}{issue\+Num}}, const std\+::vector$<$ \mbox{\hyperlink{struct_article}{Article}} $>$ \&\mbox{\hyperlink{class_periodical_a5636ea6ef786d525135abf8060e52d56}{articles}}, const std\+::string \&\mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}})
+\begin{DoxyCompactList}\small\item\em Constructor with parameters to initialize all members. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_series_a85d2b0f83a2e935424986e97334dd448}{print}} (std\+::ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em Prints information about the series. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_series_a147025fdb997e839e549cc3b642dc0bb}{read}} (std\+::istream \&is) override
+\begin{DoxyCompactList}\small\item\em Reads information about the series from input stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_series_a6972b1a6aa67b403c05539acaf52c7d3}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones the current object. \end{DoxyCompactList}\item 
+const unsigned \mbox{\hyperlink{class_series_ab3d8541a92c679690e2deaf41755ed55}{get\+Year}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the year (uses \doxylink{class_book_acbb1bceae42a95120da32ea7ae617451}{Book\+::get\+Year()}). \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_series_afe4572053c254658d637ea8401f289cb}{get\+Author}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the author (uses \doxylink{class_book_a2f5a75ab0b8ceabb63eb4c080f1c889b}{Book\+::get\+Author()}). \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_series_adb094b7fcd4f4b3a80733d889caf5eea}{get\+Isbn\+Issn}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the ISBN number (uses Book\+::get\+ISBN()). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_series_af3ddd9527a8cb3074cd9d2059d2122b9}{print\+Filtered}} (std\+::ostream \&os=std\+::cout) const override
+\begin{DoxyCompactList}\small\item\em Prints filtered information. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_series_a37d9b311806a3cc3d9a5c018554e2e09}{get\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the type of the library item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Book} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_book_a928832a54c541347399cefbd70312319}{Book}} (const GENRE \&\mbox{\hyperlink{class_library_item_a544c5eb1ad563ea2709357cd49d043ae}{genre}}, const std\+::string \&\mbox{\hyperlink{class_library_item_acbba38b55499d77ccd35de6250d684b4}{title}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a13989a7903c1b0ee9e0fd0e27eadcf78}{publisher}}, double \mbox{\hyperlink{class_library_item_a8882dadbcfc1e4917081042b48221f19}{rating}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a3916b248f64f4140d8158dc769c335f5}{description}}, const size\+\_\+t copies\+Count, const std\+::string \&\mbox{\hyperlink{class_book_a7e1f0966c227ccaaf8e76fa56226888f}{author}}, const unsigned \mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}}, const std\+::string \&\mbox{\hyperlink{class_book_a8ef7c988860be17bf51c245ae8b4cf34}{keywords}}, const std\+::string \&\mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}})
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+const std\+::string \& {\bfseries get\+Key\+Words} () const
+\item 
+const std\+::string \& {\bfseries get\+ISBN} () const
+\item 
+void {\bfseries set\+Author} (const std\+::string \&new\+Author)
+\item 
+void {\bfseries set\+Year} (const unsigned new\+Year=2025)
+\item 
+void {\bfseries set\+Keywords} (const std\+::string \&new\+Keywords)
+\item 
+void {\bfseries set\+ISBN} (const std\+::string \&new\+ISBN="{}"{})
+\item 
+bool \mbox{\hyperlink{class_book_abccd6185bdb909fde29a09c6da5354db}{has\+ISBN}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the object has an ISBN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_library_item}{Library\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Library\+Item} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, creates a unique ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_library_item_ad8ea803403dfef5ca61248c1ae6ab44f}{Library\+Item}} (const GENRE \&\mbox{\hyperlink{class_library_item_a544c5eb1ad563ea2709357cd49d043ae}{genre}}, const std\+::string \&\mbox{\hyperlink{class_library_item_acbba38b55499d77ccd35de6250d684b4}{title}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a13989a7903c1b0ee9e0fd0e27eadcf78}{publisher}}, double \mbox{\hyperlink{class_library_item_a8882dadbcfc1e4917081042b48221f19}{rating}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a3916b248f64f4140d8158dc769c335f5}{description}}, const size\+\_\+t copies\+Count)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Library\+Item} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+const unsigned {\bfseries get\+Unique\+ID} () const
+\item 
+const GENRE \& {\bfseries get\+Genre} () const
+\item 
+const std\+::string \& {\bfseries get\+Title} () const
+\item 
+const std\+::string \& {\bfseries get\+Publisher} () const
+\item 
+const double {\bfseries get\+Rating} () const
+\item 
+const std\+::string \& {\bfseries get\+Description} () const
+\item 
+const size\+\_\+t {\bfseries get\+Copies\+CNT} () const
+\item 
+void {\bfseries set\+Genre} (const GENRE \&new\+Genre)
+\item 
+void {\bfseries set\+Title} (const std\+::string \&newtitle)
+\item 
+void {\bfseries set\+Publisher} (const std\+::string \&new\+Publisher)
+\item 
+void {\bfseries set\+Rating} (const double new\+Rating)
+\item 
+void {\bfseries set\+Description} (const std\+::string \&new\+Description)
+\item 
+void {\bfseries set\+Copies\+CNT} (const size\+\_\+t new\+Copies)
+\item 
+void \mbox{\hyperlink{class_library_item_ac827eee28123d8e44b47ce351d830b00}{print\+Library\+Item}} (std\+::ostream \&os) const
+\begin{DoxyCompactList}\small\item\em Prints the basic data of the library item for derived classes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_item_adc78cf974e397b615933eb8e63f00653}{read\+Library\+Item}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Reads the basic data from an input stream for derived classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_periodical}{Periodical}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Periodical} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_periodical_ac295e9484899a6b21f9982e6ac3337b3}{Periodical}} (const GENRE \&\mbox{\hyperlink{class_library_item_a544c5eb1ad563ea2709357cd49d043ae}{genre}}, const std\+::string \&\mbox{\hyperlink{class_library_item_acbba38b55499d77ccd35de6250d684b4}{title}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a13989a7903c1b0ee9e0fd0e27eadcf78}{publisher}}, double \mbox{\hyperlink{class_library_item_a8882dadbcfc1e4917081042b48221f19}{rating}}, const std\+::string \&\mbox{\hyperlink{class_library_item_a3916b248f64f4140d8158dc769c335f5}{description}}, const size\+\_\+t copies\+Count, const \mbox{\hyperlink{struct_year_and_month}{Year\+And\+Month}} \&\mbox{\hyperlink{class_periodical_a5af70126c21b91b6ecfac1a2ca195d2e}{date}}, const size\+\_\+t \mbox{\hyperlink{class_periodical_a0462e5657eda22089b4dff3417c62909}{issue\+Num}}, const std\+::vector$<$ \mbox{\hyperlink{struct_article}{Article}} $>$ \&\mbox{\hyperlink{class_periodical_a5636ea6ef786d525135abf8060e52d56}{articles}}, const std\+::string \&\mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}})
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_year_and_month}{Year\+And\+Month}} \& {\bfseries get\+Date} () const
+\item 
+const size\+\_\+t {\bfseries get\+Issue\+Num} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{struct_article}{Article}} $>$ \& {\bfseries get\+Articles} () const
+\item 
+const std\+::string \& {\bfseries get\+ISSN} () const
+\item 
+void {\bfseries set\+Year\+And\+Month} (const \mbox{\hyperlink{struct_year_and_month}{Year\+And\+Month}} \&new\+Date)
+\item 
+void {\bfseries set\+Issue\+Num} (const size\+\_\+t new\+Issue\+Num)
+\item 
+void {\bfseries set\+Articles} (const std\+::vector$<$ \mbox{\hyperlink{struct_article}{Article}} $>$ \&new\+Articles)
+\item 
+void {\bfseries set\+ISSN} (const std\+::string \&new\+ISSN="{}"{})
+\item 
+bool \mbox{\hyperlink{class_periodical_a2cc20b0e8804b26458dc22ac007091bb}{has\+ISSN}} () const
+\begin{DoxyCompactList}\small\item\em Checks if there is an ISSN. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_library_item}{Library\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_library_item_a99d1a7f804581407830e6e7c37605229}{Library\+Factory}} (std\+::istream \&is)
+\begin{DoxyCompactList}\small\item\em Factory function for creating \doxylink{class_library_item}{Library\+Item} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_library_item}{Library\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned {\bfseries Next\+ID} = 0
+\begin{DoxyCompactList}\small\item\em Next unique identifier (static variable). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_book_adb35756ed45a6da6da7cbad737617e6b}{is\+Valid\+Year}} (unsigned \mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}})
+\begin{DoxyCompactList}\small\item\em Checks if a year is valid for \doxylink{class_series}{Series}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_book}{Book}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries author} \{\}
+\begin{DoxyCompactList}\small\item\em Author of the book. \end{DoxyCompactList}\item 
+unsigned {\bfseries year} = 2025
+\begin{DoxyCompactList}\small\item\em Year of publication. \end{DoxyCompactList}\item 
+std\+::string {\bfseries keywords} \{\}
+\begin{DoxyCompactList}\small\item\em Keywords. \end{DoxyCompactList}\item 
+std\+::string {\bfseries ISBN} \{\}
+\begin{DoxyCompactList}\small\item\em ISBN number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_periodical}{Periodical}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_year_and_month}{Year\+And\+Month}} {\bfseries date} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_date}{Date} of publication. \end{DoxyCompactList}\item 
+size\+\_\+t {\bfseries issue\+Num} = 0
+\begin{DoxyCompactList}\small\item\em Issue number. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_article}{Article}} $>$ {\bfseries articles} \{\}
+\begin{DoxyCompactList}\small\item\em List of articles. \end{DoxyCompactList}\item 
+std\+::string {\bfseries ISSN} \{\}
+\begin{DoxyCompactList}\small\item\em ISSN number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a series as a derived class from both \doxylink{class_book}{Book} and \doxylink{class_periodical}{Periodical}. 
+
+\label{doc-constructors}
+\Hypertarget{class_series_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_series_ac53b5c0690d94083441128ab8204c64d}\index{Series@{Series}!Series@{Series}}
+\index{Series@{Series}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{Series()}{Series()}}
+{\footnotesize\ttfamily \label{class_series_ac53b5c0690d94083441128ab8204c64d} 
+Series\+::\+Series (\begin{DoxyParamCaption}\item[{const GENRE \&}]{genre}{, }\item[{const std\+::string \&}]{title}{, }\item[{const std\+::string \&}]{publisher}{, }\item[{double}]{rating}{, }\item[{const std\+::string \&}]{description}{, }\item[{const size\+\_\+t}]{copies\+Count}{, }\item[{const std\+::string \&}]{author}{, }\item[{const unsigned}]{year}{, }\item[{const std\+::string \&}]{keywords}{, }\item[{const std\+::string \&}]{ISBN}{, }\item[{const \mbox{\hyperlink{struct_year_and_month}{Year\+And\+Month}} \&}]{date}{, }\item[{const size\+\_\+t}]{issue\+Num}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_article}{Article}} $>$ \&}]{articles}{, }\item[{const std\+::string \&}]{ISSN}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with parameters to initialize all members. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em genre} & Genre. \\
+\hline
+{\em title} & Title. \\
+\hline
+{\em publisher} & Publisher. \\
+\hline
+{\em rating} & Rating. \\
+\hline
+{\em description} & Description. \\
+\hline
+{\em copies\+Count} & Number of copies. \\
+\hline
+{\em author} & Author. \\
+\hline
+{\em year} & Year. \\
+\hline
+{\em keywords} & Keywords. \\
+\hline
+{\em ISBN} & ISBN number. \\
+\hline
+{\em date} & \doxylink{class_date}{Date} (year and month). \\
+\hline
+{\em issue\+Num} & Issue number. \\
+\hline
+{\em articles} & Vector of articles. \\
+\hline
+{\em ISSN} & ISSN number. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_series_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_series_a6972b1a6aa67b403c05539acaf52c7d3}\index{Series@{Series}!clone@{clone}}
+\index{clone@{clone}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_series_a6972b1a6aa67b403c05539acaf52c7d3} 
+\mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} Series\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones the current object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a copy of the object. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_a9de76ddc8c0358d2cd0d9d68333fabb7}{Book}}.
+
+\Hypertarget{class_series_afe4572053c254658d637ea8401f289cb}\index{Series@{Series}!getAuthor@{getAuthor}}
+\index{getAuthor@{getAuthor}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{getAuthor()}{getAuthor()}}
+{\footnotesize\ttfamily \label{class_series_afe4572053c254658d637ea8401f289cb} 
+const std\+::string \& Series\+::get\+Author (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the author (uses \doxylink{class_book_a2f5a75ab0b8ceabb63eb4c080f1c889b}{Book\+::get\+Author()}). 
+
+\begin{DoxyReturn}{Returns}
+Author. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_a2f5a75ab0b8ceabb63eb4c080f1c889b}{Book}}.
+
+\Hypertarget{class_series_adb094b7fcd4f4b3a80733d889caf5eea}\index{Series@{Series}!getIsbnIssn@{getIsbnIssn}}
+\index{getIsbnIssn@{getIsbnIssn}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{getIsbnIssn()}{getIsbnIssn()}}
+{\footnotesize\ttfamily \label{class_series_adb094b7fcd4f4b3a80733d889caf5eea} 
+const std\+::string \& Series\+::get\+Isbn\+Issn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the ISBN number (uses Book\+::get\+ISBN()). 
+
+\begin{DoxyReturn}{Returns}
+ISBN. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_aec6d105f6172492b1f7b7655d551c959}{Book}}.
+
+\Hypertarget{class_series_a37d9b311806a3cc3d9a5c018554e2e09}\index{Series@{Series}!getType@{getType}}
+\index{getType@{getType}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_series_a37d9b311806a3cc3d9a5c018554e2e09} 
+std\+::string Series\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type of the library item. 
+
+\begin{DoxyReturn}{Returns}
+String "{}\+Series"{}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_a88139520bbd888940da342721cb922d4}{Book}}.
+
+\Hypertarget{class_series_ab3d8541a92c679690e2deaf41755ed55}\index{Series@{Series}!getYear@{getYear}}
+\index{getYear@{getYear}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily \label{class_series_ab3d8541a92c679690e2deaf41755ed55} 
+const unsigned Series\+::get\+Year (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the year (uses \doxylink{class_book_acbb1bceae42a95120da32ea7ae617451}{Book\+::get\+Year()}). 
+
+\begin{DoxyReturn}{Returns}
+Year. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_acbb1bceae42a95120da32ea7ae617451}{Book}}.
+
+\Hypertarget{class_series_a85d2b0f83a2e935424986e97334dd448}\index{Series@{Series}!print@{print}}
+\index{print@{print}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_series_a85d2b0f83a2e935424986e97334dd448} 
+void Series\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prints information about the series. 
+
+Format\+: Series\texorpdfstring{$\vert$}{|}\+Genre\texorpdfstring{$\vert$}{|}\+Title\texorpdfstring{$\vert$}{|}publisher\texorpdfstring{$\vert$}{|}rating\texorpdfstring{$\vert$}{|}description\texorpdfstring{$\vert$}{|}copies\texorpdfstring{$\vert$}{|}author\texorpdfstring{$\vert$}{|}year\texorpdfstring{$\vert$}{|}keywords\texorpdfstring{$\vert$}{|}\+ISBN or N/A
+
+\texorpdfstring{$\vert$}{|}year\texorpdfstring{$\vert$}{|}month\texorpdfstring{$\vert$}{|}issue\+Num\texorpdfstring{$\vert$}{|}cnt\+Articles\texorpdfstring{$\vert$}{|}articles...\texorpdfstring{$\vert$}{|}\+ISSN or N/A 
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_abfd8c257efbf7e8fbf04433b1313d8a6}{Book}}.
+
+\Hypertarget{class_series_af3ddd9527a8cb3074cd9d2059d2122b9}\index{Series@{Series}!printFiltered@{printFiltered}}
+\index{printFiltered@{printFiltered}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{printFiltered()}{printFiltered()}}
+{\footnotesize\ttfamily \label{class_series_af3ddd9527a8cb3074cd9d2059d2122b9} 
+void Series\+::print\+Filtered (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{ = {\ttfamily std\+:\+:cout}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prints filtered information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_a3d1fb0294be6320efb4aa5931a08ebe9}{Book}}.
+
+\Hypertarget{class_series_a147025fdb997e839e549cc3b642dc0bb}\index{Series@{Series}!read@{read}}
+\index{read@{read}!Series@{Series}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{class_series_a147025fdb997e839e549cc3b642dc0bb} 
+void Series\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reads information about the series from input stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Input stream. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_book_a3eb92eecd640c0fe5dcc773e04f4adc2}{Book}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Stefan/\+Desktop/\+Render\+Doc/Series.\+h\item 
+C\+:/\+Users/\+Stefan/\+Desktop/\+Render\+Doc/Series.\+cpp\end{DoxyCompactItemize}

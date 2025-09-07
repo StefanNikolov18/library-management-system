@@ -1,0 +1,329 @@
+\doxysection{Command Class Reference}
+\hypertarget{class_command}{}\label{class_command}\index{Command@{Command}}
+
+
+Class for processing user commands for the system. Allows execution of operations such as login, searching, adding, and removing items and users.  
+
+
+
+
+{\ttfamily \#include $<$Command.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_command_a38bbdb22e270bf7bceda2493450a2202}{Command}} (\mbox{\hyperlink{class_system}{System}} \&\mbox{\hyperlink{class_command_aec215c907b0e8c55e26b472735d165f1}{system}}, const std\+::string \&input\+Command)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the command with the system and the input command. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_aeb859659170f88a5a3f4ad3e9253c449}\label{class_command_aeb859659170f88a5a3f4ad3e9253c449} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Command} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_aa54cb6b4f235fac993033731a2c65fb7}\label{class_command_aa54cb6b4f235fac993033731a2c65fb7} 
+{\bfseries Command} (const \mbox{\hyperlink{class_command}{Command}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em copy constructor deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a5b54d650b0d5a459242e49bb6dea0193}\label{class_command_a5b54d650b0d5a459242e49bb6dea0193} 
+\mbox{\hyperlink{class_command}{Command}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_command}{Command}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em operator= deleted. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_abc8574913684044b0f1a9f810b4e969b}\label{class_command_abc8574913684044b0f1a9f810b4e969b} 
+void {\bfseries execute} ()
+\begin{DoxyCompactList}\small\item\em Executes the command, performs all preprocessing and calls the necessary function from class \doxylink{class_system}{System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_command_ae7e8be04f2ae8e9023171d05aa8a4887}\label{class_command_ae7e8be04f2ae8e9023171d05aa8a4887} 
+void {\bfseries help} () const
+\item 
+\Hypertarget{class_command_a4ab25993c491e07aa5cba99b0816b376}\label{class_command_a4ab25993c491e07aa5cba99b0816b376} 
+void {\bfseries login} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User} login. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_ae4844f02009405421f1d234eb03f2ed7}\label{class_command_ae4844f02009405421f1d234eb03f2ed7} 
+void {\bfseries logout} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User} logout. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a6bcc76de2ab3119088c15a04a66356e6}\label{class_command_a6bcc76de2ab3119088c15a04a66356e6} 
+void {\bfseries books\+All} () const
+\begin{DoxyCompactList}\small\item\em Prints all books. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a502526d5d31d0824eea5cf32a6041f54}\label{class_command_a502526d5d31d0824eea5cf32a6041f54} 
+void {\bfseries newsletters\+All} () const
+\begin{DoxyCompactList}\small\item\em Prints all newsletters. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_af95f8f38be7874e0f2cfa608e0a5d9db}\label{class_command_af95f8f38be7874e0f2cfa608e0a5d9db} 
+void {\bfseries series\+All} () const
+\begin{DoxyCompactList}\small\item\em Prints all series. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a4b1bdc30c26654b6747b43a05d6c02e5}\label{class_command_a4b1bdc30c26654b6747b43a05d6c02e5} 
+void {\bfseries List\+All} () const
+\begin{DoxyCompactList}\small\item\em Prints all items (books, newsletters, series). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_aa397a0e6e4c60df0ab2b14569e5fec92}{list\+Info}} (const std\+::string \&list\+Info\+Pref) const
+\begin{DoxyCompactList}\small\item\em Searches for information about a library item by ISBN or ISSN. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_a270b6daf4c0cceb1cc9b5fb2f3b445ed}{find\+Item}} (const std\+::string \&Prefix, const std\+::string \&Type="{}"{}) const
+\begin{DoxyCompactList}\small\item\em Searches items by given option=\{title, author, tag\}, with sorting (asc, desc) and top N. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_a9663489f2f2902e378d793c8dabefb64}{find\+User}} (const std\+::string \&user\+Find\+Prefix) const
+\begin{DoxyCompactList}\small\item\em Searches for a user. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a94be3b52a14bd581453d484f9e9cbd90}\label{class_command_a94be3b52a14bd581453d484f9e9cbd90} 
+void {\bfseries Books\+Add} () const
+\begin{DoxyCompactList}\small\item\em Adds a new book, using \doxylink{class_command_a5c8b22f4773d70919fbe19d2f5a96fad}{Read\+Data\+For\+Book()} and inserts it into the system. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_ada3dd37d274b285ba3378a347a0ebff3}\label{class_command_ada3dd37d274b285ba3378a347a0ebff3} 
+void {\bfseries Newsletter\+Add} () const
+\begin{DoxyCompactList}\small\item\em Adds a new newsletter, using \doxylink{class_command_a63966c9a57d37141f1486315f7bc3768}{Read\+Data\+For\+Periodical()} and inserts it into the system. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a62e52be1da289093738f0090062fb5e5}\label{class_command_a62e52be1da289093738f0090062fb5e5} 
+void {\bfseries Series\+Add} () const
+\begin{DoxyCompactList}\small\item\em Adds a new series, using \doxylink{class_command_ad08de4debd9575f2662b4c3d7305722b}{Read\+Data\+For\+Series()} and inserts it into the system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_a634886c2658a0b5a5f4fe92bdfaf0884}{Add\+User}} (const std\+::string \&add\+User\+Pref) const
+\begin{DoxyCompactList}\small\item\em Adds a new user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_a2b621001b13aa9752e25cf304bf72cc5}{Remove\+User}} (const std\+::string \&remove\+User\+Pref) const
+\begin{DoxyCompactList}\small\item\em Removes a user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_aae1d354ffec23e6482b45532ca454a6b}{Change\+Password}} (const std\+::string \&user\+Change\+Prefix) const
+\begin{DoxyCompactList}\small\item\em Changes a user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_a4645493b1ab1b43eff82b4d67bfaa8bf}{Take\+By\+ID}} (const std\+::string \&take\+IDPrefix) const
+\begin{DoxyCompactList}\small\item\em Takes an item by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_aa71d3a055fdf4c682d10e9c7e6f2a1b2}{Return\+ID}} (const std\+::string \&return\+IDPrefix) const
+\begin{DoxyCompactList}\small\item\em Returns an item by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_aae4b1d68a56ac0fec7fe9587bb304d56}{List\+Remove}} (const std\+::string \&list\+Remove\+Prefix) const
+\begin{DoxyCompactList}\small\item\em Removes an item from a list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_command_a60713f1754ba04e45adaf9f175449adf}{List\+Change}} (const std\+::string \&list\+Change\+Prefix) const
+\begin{DoxyCompactList}\small\item\em Adds or changes an item in a list. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_command_a5c8b22f4773d70919fbe19d2f5a96fad}{Read\+Data\+For\+Book}} () const
+\begin{DoxyCompactList}\small\item\em Reads book data from standard input. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_command_a63966c9a57d37141f1486315f7bc3768}{Read\+Data\+For\+Periodical}} () const
+\begin{DoxyCompactList}\small\item\em Reads newsletter data from standard input. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_command_ad08de4debd9575f2662b4c3d7305722b}{Read\+Data\+For\+Series}} () const
+\begin{DoxyCompactList}\small\item\em Reads series data from standard input. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a5227b003a20ff18d550d23003bdfde64}\label{class_command_a5227b003a20ff18d550d23003bdfde64} 
+void {\bfseries check\+Point\+Books} () const
+\begin{DoxyCompactList}\small\item\em Saves changes in books to the file with file\+Name\+Book. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a2a8a135ebe7b01860d19c8aa3c3cbcc0}\label{class_command_a2a8a135ebe7b01860d19c8aa3c3cbcc0} 
+void {\bfseries check\+Point\+Users} () const
+\begin{DoxyCompactList}\small\item\em Saves changes in users to the file with file\+Name\+Users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_command_aec215c907b0e8c55e26b472735d165f1}\label{class_command_aec215c907b0e8c55e26b472735d165f1} 
+\mbox{\hyperlink{class_system}{System}} \& {\bfseries system}
+\begin{DoxyCompactList}\small\item\em Reference to the system. \end{DoxyCompactList}\item 
+\Hypertarget{class_command_a7a6e618851df0485fd4cc264cb222e99}\label{class_command_a7a6e618851df0485fd4cc264cb222e99} 
+std\+::string {\bfseries command}
+\begin{DoxyCompactList}\small\item\em Input command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for processing user commands for the system. Allows execution of operations such as login, searching, adding, and removing items and users. 
+
+\label{doc-constructors}
+\Hypertarget{class_command_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_command_a38bbdb22e270bf7bceda2493450a2202}\index{Command@{Command}!Command@{Command}}
+\index{Command@{Command}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{Command()}{Command()}}
+{\footnotesize\ttfamily \label{class_command_a38bbdb22e270bf7bceda2493450a2202} 
+Command\+::\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_system}{System}} \&}]{system}{, }\item[{const std\+::string \&}]{input\+Command}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes the command with the system and the input command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em system} & Reference to the system being used. \\
+\hline
+{\em input\+Command} & Input string containing the command. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_command_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_command_a634886c2658a0b5a5f4fe92bdfaf0884}\index{Command@{Command}!AddUser@{AddUser}}
+\index{AddUser@{AddUser}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{AddUser()}{AddUser()}}
+{\footnotesize\ttfamily \label{class_command_a634886c2658a0b5a5f4fe92bdfaf0884} 
+void Command\+::\+Add\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{add\+User\+Pref}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds a new user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em add\+User\+Pref} & Prefix containing the user. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_aae1d354ffec23e6482b45532ca454a6b}\index{Command@{Command}!ChangePassword@{ChangePassword}}
+\index{ChangePassword@{ChangePassword}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ChangePassword()}{ChangePassword()}}
+{\footnotesize\ttfamily \label{class_command_aae1d354ffec23e6482b45532ca454a6b} 
+void Command\+::\+Change\+Password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{user\+Change\+Prefix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Changes a user\textquotesingle{}s password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Change\+Prefix} & Prefix containing the new password. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_a270b6daf4c0cceb1cc9b5fb2f3b445ed}\index{Command@{Command}!findItem@{findItem}}
+\index{findItem@{findItem}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{findItem()}{findItem()}}
+{\footnotesize\ttfamily \label{class_command_a270b6daf4c0cceb1cc9b5fb2f3b445ed} 
+void Command\+::find\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Prefix}{, }\item[{const std\+::string \&}]{Type}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Searches items by given option=\{title, author, tag\}, with sorting (asc, desc) and top N. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Prefix} & Prefix for processing. \\
+\hline
+{\em Type} & Type of the item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_a9663489f2f2902e378d793c8dabefb64}\index{Command@{Command}!findUser@{findUser}}
+\index{findUser@{findUser}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{findUser()}{findUser()}}
+{\footnotesize\ttfamily \label{class_command_a9663489f2f2902e378d793c8dabefb64} 
+void Command\+::find\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{user\+Find\+Prefix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Searches for a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Find\+Prefix} & Prefix for processing. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_a60713f1754ba04e45adaf9f175449adf}\index{Command@{Command}!ListChange@{ListChange}}
+\index{ListChange@{ListChange}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ListChange()}{ListChange()}}
+{\footnotesize\ttfamily \label{class_command_a60713f1754ba04e45adaf9f175449adf} 
+void Command\+::\+List\+Change (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{list\+Change\+Prefix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds or changes an item in a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Change\+Prefix} & Prefix for adding or changing, which is an ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_aa397a0e6e4c60df0ab2b14569e5fec92}\index{Command@{Command}!listInfo@{listInfo}}
+\index{listInfo@{listInfo}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{listInfo()}{listInfo()}}
+{\footnotesize\ttfamily \label{class_command_aa397a0e6e4c60df0ab2b14569e5fec92} 
+void Command\+::list\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{list\+Info\+Pref}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Searches for information about a library item by ISBN or ISSN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Info\+Pref} & Contains ISBN or ISSN. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_aae4b1d68a56ac0fec7fe9587bb304d56}\index{Command@{Command}!ListRemove@{ListRemove}}
+\index{ListRemove@{ListRemove}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ListRemove()}{ListRemove()}}
+{\footnotesize\ttfamily \label{class_command_aae4b1d68a56ac0fec7fe9587bb304d56} 
+void Command\+::\+List\+Remove (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{list\+Remove\+Prefix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Removes an item from a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list\+Remove\+Prefix} & Prefix for removing from the list, which is an ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_a5c8b22f4773d70919fbe19d2f5a96fad}\index{Command@{Command}!ReadDataForBook@{ReadDataForBook}}
+\index{ReadDataForBook@{ReadDataForBook}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ReadDataForBook()}{ReadDataForBook()}}
+{\footnotesize\ttfamily \label{class_command_a5c8b22f4773d70919fbe19d2f5a96fad} 
+const \mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} Command\+::\+Read\+Data\+For\+Book (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reads book data from standard input. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to newly created \doxylink{class_library_item}{Library\+Item} for the book. 
+\end{DoxyReturn}
+\Hypertarget{class_command_a63966c9a57d37141f1486315f7bc3768}\index{Command@{Command}!ReadDataForPeriodical@{ReadDataForPeriodical}}
+\index{ReadDataForPeriodical@{ReadDataForPeriodical}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ReadDataForPeriodical()}{ReadDataForPeriodical()}}
+{\footnotesize\ttfamily \label{class_command_a63966c9a57d37141f1486315f7bc3768} 
+const \mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} Command\+::\+Read\+Data\+For\+Periodical (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reads newsletter data from standard input. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to newly created \doxylink{class_library_item}{Library\+Item} for the newsletter. 
+\end{DoxyReturn}
+\Hypertarget{class_command_ad08de4debd9575f2662b4c3d7305722b}\index{Command@{Command}!ReadDataForSeries@{ReadDataForSeries}}
+\index{ReadDataForSeries@{ReadDataForSeries}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ReadDataForSeries()}{ReadDataForSeries()}}
+{\footnotesize\ttfamily \label{class_command_ad08de4debd9575f2662b4c3d7305722b} 
+const \mbox{\hyperlink{class_library_item}{Library\+Item}} \texorpdfstring{$\ast$}{*} Command\+::\+Read\+Data\+For\+Series (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reads series data from standard input. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to newly created \doxylink{class_library_item}{Library\+Item} for the series. 
+\end{DoxyReturn}
+\Hypertarget{class_command_a2b621001b13aa9752e25cf304bf72cc5}\index{Command@{Command}!RemoveUser@{RemoveUser}}
+\index{RemoveUser@{RemoveUser}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{RemoveUser()}{RemoveUser()}}
+{\footnotesize\ttfamily \label{class_command_a2b621001b13aa9752e25cf304bf72cc5} 
+void Command\+::\+Remove\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{remove\+User\+Pref}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Removes a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em remove\+User\+Pref} & Prefix containing the user. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_aa71d3a055fdf4c682d10e9c7e6f2a1b2}\index{Command@{Command}!ReturnID@{ReturnID}}
+\index{ReturnID@{ReturnID}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{ReturnID()}{ReturnID()}}
+{\footnotesize\ttfamily \label{class_command_aa71d3a055fdf4c682d10e9c7e6f2a1b2} 
+void Command\+::\+Return\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{return\+IDPrefix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns an item by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em return\+IDPrefix} & Prefix for returning by ID. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_command_a4645493b1ab1b43eff82b4d67bfaa8bf}\index{Command@{Command}!TakeByID@{TakeByID}}
+\index{TakeByID@{TakeByID}!Command@{Command}}
+\doxysubsubsection{\texorpdfstring{TakeByID()}{TakeByID()}}
+{\footnotesize\ttfamily \label{class_command_a4645493b1ab1b43eff82b4d67bfaa8bf} 
+void Command\+::\+Take\+By\+ID (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{take\+IDPrefix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Takes an item by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em take\+IDPrefix} & Prefix for taking by ID. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Stefan/\+Desktop/\+Render\+Doc/Command.\+h\item 
+C\+:/\+Users/\+Stefan/\+Desktop/\+Render\+Doc/Command.\+cpp\end{DoxyCompactItemize}

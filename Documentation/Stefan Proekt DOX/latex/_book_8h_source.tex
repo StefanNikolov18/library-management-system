@@ -1,0 +1,58 @@
+\doxysection{Book.\+h}
+\hypertarget{_book_8h_source}{}\label{_book_8h_source}\index{C:/Users/Stefan/Desktop/RenderDoc/Book.h@{C:/Users/Stefan/Desktop/RenderDoc/Book.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}LibraryItem.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_book_abd5e47b4a9c08476ea47b0c8fbc8598c}{Book}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_library_item_a03c2c693b81f131676f8cf1f9bdedeec}{LibraryItem}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_book_abd5e47b4a9c08476ea47b0c8fbc8598c}{Book}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_book_abd5e47b4a9c08476ea47b0c8fbc8598c}{Book}}(\textcolor{keyword}{const}\ GENRE\&\ \mbox{\hyperlink{class_library_item_a544c5eb1ad563ea2709357cd49d043ae}{genre}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_library_item_acbba38b55499d77ccd35de6250d684b4}{title}},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_library_item_a13989a7903c1b0ee9e0fd0e27eadcf78}{publisher}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_library_item_a8882dadbcfc1e4917081042b48221f19}{rating}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_library_item_a3916b248f64f4140d8158dc769c335f5}{description}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ copiesCount,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_book_a7e1f0966c227ccaaf8e76fa56226888f}{author}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_book_a8ef7c988860be17bf51c245ae8b4cf34}{keywords}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book_abfd8c257efbf7e8fbf04433b1313d8a6}{print}}(std::ostream\&\ os)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book_a3eb92eecd640c0fe5dcc773e04f4adc2}{read}}(std::istream\&\ is)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_library_item_a03c2c693b81f131676f8cf1f9bdedeec}{LibraryItem}}*\ \mbox{\hyperlink{class_book_a9de76ddc8c0358d2cd0d9d68333fabb7}{clone}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{comment}{//clone}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_book_abd5e47b4a9c08476ea47b0c8fbc8598c}{Book}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00048\ \ \ \ \ std::string\ \mbox{\hyperlink{class_book_a88139520bbd888940da342721cb922d4}{getType}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Book"{}};\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_book_a3d1fb0294be6320efb4aa5931a08ebe9}{printFiltered}}(std::ostream\&\ os\ =\ std::cout)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//getters}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_book_a2f5a75ab0b8ceabb63eb4c080f1c889b}{getAuthor}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_book_a7e1f0966c227ccaaf8e76fa56226888f}{author}};\ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_book_acbb1bceae42a95120da32ea7ae617451}{getYear}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}};\ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ getKeyWords()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_book_a8ef7c988860be17bf51c245ae8b4cf34}{keywords}};\ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ getISBN()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}};\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//setters}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ setAuthor(\textcolor{keyword}{const}\ std::string\&\ newAuthor)\ \{\ this-\/>\mbox{\hyperlink{class_book_a7e1f0966c227ccaaf8e76fa56226888f}{author}}\ =\ newAuthor;\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ setYear(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ newYear\ =\ 2025)\ \{\ this-\/>\mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}}\ =\ newYear;\ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ setKeywords(\textcolor{keyword}{const}\ std::string\&\ newKeywords)\ \{\ this-\/>\mbox{\hyperlink{class_book_a8ef7c988860be17bf51c245ae8b4cf34}{keywords}}\ =\ newKeywords;\ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ setISBN(\textcolor{keyword}{const}\ std::string\&\ newISBN\ =\ \textcolor{stringliteral}{"{}"{}})\ \{\ this-\/>\mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}}\ =\ newISBN;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_book_abccd6185bdb909fde29a09c6da5354db}{hasISBN}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}}\ !=\ \textcolor{stringliteral}{"{}"{}};\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_book_aec6d105f6172492b1f7b7655d551c959}{getIsbnIssn}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}};\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_book_adb35756ed45a6da6da7cbad737617e6b}{isValidYear}}(\textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ std::string\ \mbox{\hyperlink{class_book_a7e1f0966c227ccaaf8e76fa56226888f}{author}}\{\};\ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_book_a92f880417f012bacced63dc86c3b4818}{year}}\ =\ 2025;\ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ std::string\ \mbox{\hyperlink{class_book_a8ef7c988860be17bf51c245ae8b4cf34}{keywords}}\{\};\ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ std::string\ \mbox{\hyperlink{class_book_a5ec63701db7dc5de9f8ba861f37d4c02}{ISBN}}\{\};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \};}
+
+\end{DoxyCode}

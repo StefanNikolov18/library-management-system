@@ -1,0 +1,122 @@
+\doxysection{System.\+h}
+\hypertarget{_system_8h_source}{}\label{_system_8h_source}\index{C:/Users/Stefan/Desktop/RenderDoc/System.h@{C:/Users/Stefan/Desktop/RenderDoc/System.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Library/LibraryItem.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../Users/User.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../Users/Reader.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ MAXSTORING\ 50\ }}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ PAGES\ 20\ \ \ \ }}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_system_a921e16dff2a340e5c36b5876982eba95}{System}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }Command;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_system_a921e16dff2a340e5c36b5876982eba95}{System}}(std::ifstream\&\ isLI,\ std::ifstream\&\ isUsers,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_system_a4c3a2985d317820d7c21067ab9e02161}{fileNameBooks}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_system_a9bdabf4fa9de288f09439cf19e2a8dcf}{fileNameUsers}});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_system_af2a482e31b0f5085fd7a69ec57e2e294}{\string~System}}()\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_system_abab5697f9674de795e10de8fd1acb522}{System}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_system_a921e16dff2a340e5c36b5876982eba95}{System}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_system_a921e16dff2a340e5c36b5876982eba95}{System}}\&\ \mbox{\hyperlink{class_system_a4a3143f6b60d840771ce9c6bfa3fc2cf}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_system_a921e16dff2a340e5c36b5876982eba95}{System}}\&\ other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a2d2b214a47b58be6fbf9845c250eb453}{saveToFiles}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_ae1df38679741cc9d4ba77f6a22728537}{saveToFileBooks}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a2854ce77291317212c6b04e0fba1fa5c}{saveToFileUsers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_system_ab599dddeb3b283636169b9f1cec5bbf7}{isInUserAndThisPassword}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_system_a2a205e0ecf08bd72a341218b3eed81ea}{username}},\ \textcolor{keyword}{const}\ std::string\&\ password);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_ae7b8b5659169c50b9f07ae36a78b8ebd}{loginUser}}(\textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{class_system_a2a205e0ecf08bd72a341218b3eed81ea}{username}});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_system_ad695aa2e0b729243f217bcb69559b65e}{isAdmin}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a3a85bfd4463da755c7446bca7d5926ab}{ListLibraryItems}}(\textcolor{keyword}{const}\ std::string\&\ type);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a12393ebdbe8bae23a59ae038f601068e}{ListAllLibraryItems}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ @brief\ For\ command\ "{}list\ info\ ..."{}}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a6c1a0c1ca423d8c304041d296cba120f}{ListLibraryItemInfo}}(\textcolor{keyword}{const}\ std::string\&\ isbnissn);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a21f092fd23cc103e82b010eaa0a4d04c}{findItemByOption}}(}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ Type,\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ "{}Book"{},\ "{}Periodical"{},\ "{}Series"{},\ if\ "{}"{}\ -\/\ from\ all}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ option,\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ "{}title"{},\ "{}author"{},\ "{}tag"{}}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ option\_string,\ \ \ \ \textcolor{comment}{//\ string\ to\ search}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasSort,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ whether\ sorting\ is\ enabled}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ sortKey,\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ sorting\ key}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ asc,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ true\ =\ ascending,\ false\ =\ descending}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ topCount\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/1\ if\ no\ limit,\ else\ limit\ count\ }}
+\DoxyCodeLine{00082\ \ \ \ \ );}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a59480bcc9b10bbf08e9aafd6fb8b02cc}{findUserByState}}(\textcolor{keyword}{const}\ std::string\ stateString);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_afa36e2b76a12c1bd80e646db6958d705}{findUserByName}}(\textcolor{keyword}{const}\ std::string\&\ option\_string);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a4f337863d29d706e164674c05d3529ca}{findUsersByID}}(\textcolor{keyword}{const}\ std::string\&\ option\_string);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a09bf6f11c266c16725c9824f2f4ac628}{AddInBooks}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_library_item}{LibraryItem}}*\ obj);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a72ccaf5f12f448023e7f88cd8708185d}{removeListByID}}(\textcolor{keyword}{const}\ std::string\&\ ID);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a4799e90fc13d5ad47d1f4e027ecca604}{changeListByID}}(\textcolor{keyword}{const}\ std::string\&\ ID);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a728a353719ead6cf83f0ac2e6ee18eb5}{addUser}}(std::string\&\ userSpecs);}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_af8d4228c9316e5a2c90e01d216625266}{AddInUsers}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_user}{User}}*\ obj);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a2f63878aa8e92640410cc3df57a024a4}{removeUser}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_system_a2a205e0ecf08bd72a341218b3eed81ea}{username}});}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_ae163719220cb62c239d9de97de5e4204}{changePassword}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_system_a2a205e0ecf08bd72a341218b3eed81ea}{username}},\ \textcolor{keyword}{const}\ std::string\&\ password);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{class_library_item}{LibraryItem}}*\ \mbox{\hyperlink{class_system_acfd2ae37366398f894c36f48b752f651}{BorrowbyID}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ ID);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_ae736d29fee86220bda9c3c1178b85947}{borrowID}}(\textcolor{keyword}{const}\ std::string\&\ ID);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a7615b6b6ae7677a7935d4a843fd78dad}{returnID}}(\textcolor{keyword}{const}\ std::string\&\ ID);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00144\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ public\ because\ class\ command\ is\ using\ it.}}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a4acaca9a36a8a5c521facef58ada4029}{LoadAllLibraryItemsInBooks}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a961f3b9fb1b67f1956de74794bae2610}{FreeBooks}}();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_ab87d2321aec1e32ae582a7d9910394f6}{FreeUsers}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a5a278f36dcce37e368a69d92808ebd86}{reset}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a350a4e101139b86a3f819239c8667326}{loadCountBooks}}(\textcolor{keywordtype}{size\_t}\ count\ =\ MAXSTORING);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a38fd479a537c565082b7445c1d7e0f61}{resetBooks}}();}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_system_a0a837f705d2d7c92a19404c4784de1b3}{nextBooks}}(\textcolor{keywordtype}{size\_t}\ count\ =\ MAXSTORING);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a38fb8e3478afcb64587ed19ddc6a484c}{loadAllFileBooks}}(std::vector<LibraryItem*>\&\ list,\ std::ifstream\&\ \mbox{\hyperlink{class_system_ab8403e6e40e644d6551129dc3c1bfcda}{ifs}});}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_system_a7a2af9c2a7750b882d5cfc7f9f0c6f4c}{splitsWords}}(std::vector<std::string>\&\ tokens,\ std::string\&\ userSpecs);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_system_a268af84e0833ea48e2927b53236fb1d1}{isInUsers}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_system_a2a205e0ecf08bd72a341218b3eed81ea}{username}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ std::vector<LibraryItem*>\ \mbox{\hyperlink{class_system_a9876e58bb5345a4f48420b70d1a31f5b}{books}}\{\};\ \ \ \ \ }
+\DoxyCodeLine{00181\ \ \ \ \ std::vector<User*>\ \mbox{\hyperlink{class_system_a552ed40e036f3083bad16d40b0a810ae}{users}}\{\};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ std::string\ \mbox{\hyperlink{class_system_a2a205e0ecf08bd72a341218b3eed81ea}{username}}\{\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ std::ifstream\&\ \mbox{\hyperlink{class_system_ab8403e6e40e644d6551129dc3c1bfcda}{ifs}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ std::string\ \mbox{\hyperlink{class_system_a4c3a2985d317820d7c21067ab9e02161}{fileNameBooks}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00188\ \ \ \ \ std::string\ \mbox{\hyperlink{class_system_a9bdabf4fa9de288f09439cf19e2a8dcf}{fileNameUsers}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00189\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,26 @@
+var class_library_item =
+[
+    [ "LibraryItem", "class_library_item.html#a03c2c693b81f131676f8cf1f9bdedeec", null ],
+    [ "LibraryItem", "class_library_item.html#ad8ea803403dfef5ca61248c1ae6ab44f", null ],
+    [ "~LibraryItem", "class_library_item.html#af36592750c0c340353cc246ac3cf71cf", null ],
+    [ "clone", "class_library_item.html#ad74187a8a59187b03f6cd50a0d5876c7", null ],
+    [ "createUniqueID", "class_library_item.html#a8b5f537d61f1521407bb6ecd368763e4", null ],
+    [ "getAuthor", "class_library_item.html#a612572d5ade92fd6050ea850bbf4885e", null ],
+    [ "getType", "class_library_item.html#a7fec1f38a7ad388bece569ddcc1604be", null ],
+    [ "getYear", "class_library_item.html#a7997c89b59c85c0b49d3044fcf61a2cb", null ],
+    [ "isValidRating", "class_library_item.html#a0a0a49c8454b28b7a5d787f73d28bfe4", null ],
+    [ "LibraryFactory", "class_library_item.html#a99d1a7f804581407830e6e7c37605229", null ],
+    [ "print", "class_library_item.html#a41a634e40ef46917c7ca6701be98c7c2", null ],
+    [ "printFiltered", "class_library_item.html#ac07a96ef1ad61f1fd720426fe51431a2", null ],
+    [ "printLibraryItem", "class_library_item.html#ac827eee28123d8e44b47ce351d830b00", null ],
+    [ "read", "class_library_item.html#a0334d2396f1e09905dcbccc834527c89", null ],
+    [ "readLibraryItem", "class_library_item.html#adc78cf974e397b615933eb8e63f00653", null ],
+    [ "copiesCnt", "class_library_item.html#ad4fa90dfd1ee528d656d841a390f2bc2", null ],
+    [ "description", "class_library_item.html#a3916b248f64f4140d8158dc769c335f5", null ],
+    [ "genre", "class_library_item.html#a544c5eb1ad563ea2709357cd49d043ae", null ],
+    [ "NextID", "class_library_item.html#ad3cdb39140c2a7c2434c850ae3ef2dc4", null ],
+    [ "publisher", "class_library_item.html#a13989a7903c1b0ee9e0fd0e27eadcf78", null ],
+    [ "rating", "class_library_item.html#a8882dadbcfc1e4917081042b48221f19", null ],
+    [ "title", "class_library_item.html#acbba38b55499d77ccd35de6250d684b4", null ],
+    [ "uniqueID", "class_library_item.html#ad8c3ccb5fc82a97361cd8efa59acc329", null ]
+];

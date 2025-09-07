@@ -1,0 +1,58 @@
+\doxysection{Reader.\+h}
+\hypertarget{_reader_8h_source}{}\label{_reader_8h_source}\index{C:/Users/Stefan/Desktop/RenderDoc/Reader.h@{C:/Users/Stefan/Desktop/RenderDoc/Reader.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}User.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Date/Date.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Library/LibraryItem.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../Borrow/Borrow.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reader_a2d0f857fb26234db77cc2f833e4f643e}{Reader}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_user_a4dd5fde1b81bb132994a67f27bc203d1}{User}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_reader_a2d0f857fb26234db77cc2f833e4f643e}{Reader}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_reader_a2d0f857fb26234db77cc2f833e4f643e}{Reader}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_user_aacbb807e514280f69e00bec7d71f3aee}{username}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ \mbox{\hyperlink{class_user_a429fc196d1c50751035e076172d89078}{registrationDate}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Borrow>\&\ \mbox{\hyperlink{class_reader_ab88b1b0740c8217d862af131954b0c31}{borrowingItems}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reader_ab74ae72ea55f0902fe33f9454e871b95}{print}}(std::ostream\&\ os)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reader_a9d5d82181e5c3690a46c699924898518}{read}}(std::istream\&\ is)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_user_a4dd5fde1b81bb132994a67f27bc203d1}{User}}*\ \mbox{\hyperlink{class_reader_a4dc2f791d7e6ebd372855b7ffeb13789}{clone}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{comment}{//\ clone}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_reader_a2d0f857fb26234db77cc2f833e4f643e}{Reader}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::string\ \mbox{\hyperlink{class_reader_a24cfa208ec06c12aac6b9e7cec381649}{getType}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Reader"{}};}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ For\ system\ vvv}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reader_a8ce3b4147cf04ec12c78319784187916}{AddBorrow}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_borrow}{Borrow}}\&\ obj)\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{class_reader_ab88b1b0740c8217d862af131954b0c31}{borrowingItems}}.push\_back(obj);\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reader_a08488523965f5646d67478bcbf20d0ef}{hasThisBorrowingList}}(\textcolor{keyword}{const}\ std::string\&\ title)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_reader_a94daf3f9a7f2c3d6e8768ec63e9319be}{removeBorrow}}(\textcolor{keyword}{const}\ std::string\&\ title)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reader_ab64c9d9ba85a50cc9574eab0bbb66356}{hasThisInBorrowingListID}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ ID)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reader_aaff926a697ae2bc4a68688559b3dd5cf}{hasBorrowingOverdue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ today)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_reader_a91611a43b414c730ac88e6e0a8876cb4}{InactiveUserBorrowing}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ today)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_reader_af190e419d6dea35c43dc6cfaaa8433fe}{getCntBorrow}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_reader_ab88b1b0740c8217d862af131954b0c31}{borrowingItems}}.size();\ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \ \ std::vector<Borrow>\ \mbox{\hyperlink{class_reader_ab88b1b0740c8217d862af131954b0c31}{borrowingItems}}\{\};\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+
+\end{DoxyCode}

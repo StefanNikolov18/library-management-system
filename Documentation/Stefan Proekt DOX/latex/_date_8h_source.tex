@@ -1,0 +1,44 @@
+\doxysection{Date.\+h}
+\hypertarget{_date_8h_source}{}\label{_date_8h_source}\index{C:/Users/Stefan/Desktop/RenderDoc/Date.h@{C:/Users/Stefan/Desktop/RenderDoc/Date.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_date_a686b4e694d9d3ec8861299a17becc46f}{Date}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_date_a686b4e694d9d3ec8861299a17becc46f}{Date}}(\textcolor{keywordtype}{int}\ d\ =\ 1,\ \textcolor{keywordtype}{int}\ m\ =\ 1,\ \textcolor{keywordtype}{int}\ y\ =\ 2020);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_date_a07cc65f130d4398067a86276b43294ca}{isValidDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_date_a686b4e694d9d3ec8861299a17becc46f}{Date}}\ \mbox{\hyperlink{class_date_a2b41d6a94bb88a754f0a010ea16688cf}{addDays}}(\textcolor{keywordtype}{int}\ days)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ getDay()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_date_a088706519330e455b4f68957d6801cde}{day}};\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ getMonth()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_date_aaa152f8b795cf43cbd17db72ad1263be}{month}};\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ getYear()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_date_a68742ab0fdabd6dbadb5c0fdb7888f55}{year}};\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_a52ae1f9d22af0d5b344d3c931b156928}{print}}(std::ostream\&\ os\ =\ std::cout)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_acdfdb809332c00899fbf4c56e425323b}{read}}(std::istream\&\ is);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_date_a088706519330e455b4f68957d6801cde}{day}};\ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_date_aaa152f8b795cf43cbd17db72ad1263be}{month}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_date_a68742ab0fdabd6dbadb5c0fdb7888f55}{year}};\ \ }
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \mbox{\hyperlink{class_date}{Date}}\ getTodayDate();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ rhs);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{bool}\ operator>(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ rhs);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{bool}\ operator<=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ rhs);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{bool}\ operator>=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_date}{Date}}\&\ rhs);}
+
+\end{DoxyCode}

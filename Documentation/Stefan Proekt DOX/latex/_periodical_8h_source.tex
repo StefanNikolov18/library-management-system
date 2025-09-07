@@ -1,0 +1,91 @@
+\doxysection{Periodical.\+h}
+\hypertarget{_periodical_8h_source}{}\label{_periodical_8h_source}\index{C:/Users/Stefan/Desktop/RenderDoc/Periodical.h@{C:/Users/Stefan/Desktop/RenderDoc/Periodical.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}LibraryItem.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Date/Date.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_year_and_month_a4c80423fe289edadee303d6c60a2f0f6}{YearAndMonth}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ year;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ month;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_year_and_month_a4c80423fe289edadee303d6c60a2f0f6}{YearAndMonth}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ year\ =\ 2024,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ month\ =\ 1)\ :}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ year(year),}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ month(month)}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_date}{Date}}\ today\ =\ getTodayDate();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (year\ <\ 1800\ ||\ year\ >\ today.getYear())}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Invalid\ year!"{}});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!month\ ||\ month\ >\ 12)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Invalid\ month!"{}});}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_article_a12e73dafa8f47b0c08b2c6e0cab6009e}{Article}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ title\{\};}
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ author\{\};}
+\DoxyCodeLine{00033\ \ \ \ \ std::string\ keywords\{\};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{struct_article_a12e73dafa8f47b0c08b2c6e0cab6009e}{Article}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{struct_article_a3ac304b61c41da1fd9f4d15bd3cf5db3}{Article}}(\textcolor{keyword}{const}\ std::string\&\ title,\ \textcolor{keyword}{const}\ std::string\&\ author,\ \textcolor{keyword}{const}\ std::string\&\ keywords)\ :}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ title(title),\ author(author),\ keywords(keywords)}
+\DoxyCodeLine{00044\ \ \ \ \ \{\}}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_periodical_a0a95fc7d7ea71a82253d850c035250ba}{Periodical}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_library_item_a03c2c693b81f131676f8cf1f9bdedeec}{LibraryItem}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_periodical_a0a95fc7d7ea71a82253d850c035250ba}{Periodical}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_periodical_a0a95fc7d7ea71a82253d850c035250ba}{Periodical}}(\textcolor{keyword}{const}\ GENRE\&\ \mbox{\hyperlink{class_library_item_a544c5eb1ad563ea2709357cd49d043ae}{genre}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_library_item_acbba38b55499d77ccd35de6250d684b4}{title}},}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_library_item_a13989a7903c1b0ee9e0fd0e27eadcf78}{publisher}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_library_item_a8882dadbcfc1e4917081042b48221f19}{rating}},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_library_item_a3916b248f64f4140d8158dc769c335f5}{description}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ copiesCount,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_year_and_month}{YearAndMonth}}\&\ \mbox{\hyperlink{class_periodical_a5af70126c21b91b6ecfac1a2ca195d2e}{date}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_periodical_a0462e5657eda22089b4dff3417c62909}{issueNum}},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Article>\&\ \mbox{\hyperlink{class_periodical_a5636ea6ef786d525135abf8060e52d56}{articles}},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_periodical_a3da6f95bebba4c9a88fcb297c6862280}{print}}(std::ostream\&\ os)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_periodical_a4e7794c89117318bd0001a20531b9de6}{read}}(std::istream\&\ is)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_library_item_a03c2c693b81f131676f8cf1f9bdedeec}{LibraryItem}}*\ \mbox{\hyperlink{class_periodical_a1e9da03c19d1ce277907c282eb666b75}{clone}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_periodical_a0a95fc7d7ea71a82253d850c035250ba}{Periodical}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_periodical_aa36aebb70ae0102fea2fd1eddfdd517d}{getAuthor}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};\ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_periodical_a0c329592586512cbc909bf6bf3a838ed}{getIsbnIssn}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}};\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_periodical_aa77fdf5f378d52ede7ed2f18b36af61a}{printFiltered}}(std::ostream\&\ os\ =\ std::cout)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00102\ \ \ \ \ std::string\ \mbox{\hyperlink{class_periodical_a8d03c985adf88e9603b47825b99d48c9}{getType}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Periodical"{}};\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\ getters}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_year_and_month}{YearAndMonth}}\&\ getDate()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_periodical_a5af70126c21b91b6ecfac1a2ca195d2e}{date}};\ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ getIssueNum()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_periodical_a0462e5657eda22089b4dff3417c62909}{issueNum}};\ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Article>\&\ getArticles()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_periodical_a5636ea6ef786d525135abf8060e52d56}{articles}};\ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ getISSN()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}};\ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_periodical_ac7ac81b0b145e25459835e1623403593}{getYear}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_periodical_a5af70126c21b91b6ecfac1a2ca195d2e}{date}}.year;\ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ setters}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ setYearAndMonth(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_year_and_month}{YearAndMonth}}\&\ newDate)\ \{\ this-\/>\mbox{\hyperlink{class_periodical_a5af70126c21b91b6ecfac1a2ca195d2e}{date}}\ =\ newDate;\ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ setIssueNum(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ newIssueNum)\ \{\ this-\/>\mbox{\hyperlink{class_periodical_a0462e5657eda22089b4dff3417c62909}{issueNum}}\ =\ newIssueNum;\ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ setArticles(\textcolor{keyword}{const}\ std::vector<Article>\&\ newArticles)\ \{\ this-\/>\mbox{\hyperlink{class_periodical_a5636ea6ef786d525135abf8060e52d56}{articles}}\ =\ newArticles;\ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ setISSN(\textcolor{keyword}{const}\ std::string\&\ newISSN\ =\ \textcolor{stringliteral}{"{}"{}})\ \{\ this-\/>\mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}}\ =\ newISSN;\ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_periodical_a2cc20b0e8804b26458dc22ac007091bb}{hasISSN}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}}\ !=\ \textcolor{stringliteral}{"{}"{}};\ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{struct_year_and_month}{YearAndMonth}}\ \mbox{\hyperlink{class_periodical_a5af70126c21b91b6ecfac1a2ca195d2e}{date}}\{\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_periodical_a0462e5657eda22089b4dff3417c62909}{issueNum}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \ \ std::vector<Article>\ \mbox{\hyperlink{class_periodical_a5636ea6ef786d525135abf8060e52d56}{articles}}\{\};\ \ }
+\DoxyCodeLine{00129\ \ \ \ \ std::string\ \mbox{\hyperlink{class_periodical_a9c635f9108422b309f638add61f35dfd}{ISSN}}\{\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \};}
+
+\end{DoxyCode}

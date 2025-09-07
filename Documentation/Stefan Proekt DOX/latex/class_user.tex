@@ -1,0 +1,394 @@
+\doxysection{User Class Reference}
+\hypertarget{class_user}{}\label{class_user}\index{User@{User}}
+
+
+Abstract base class representing a user in the system.  
+
+
+
+
+{\ttfamily \#include $<$User.\+h$>$}
+
+Inheritance diagram for User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_user_a4dd5fde1b81bb132994a67f27bc203d1}\label{class_user_a4dd5fde1b81bb132994a67f27bc203d1} 
+{\bfseries User} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_aebf1fa65a1d9b6d9e9b2ccb9622408af}{User}} (const std\+::string \&\mbox{\hyperlink{class_user_aacbb807e514280f69e00bec7d71f3aee}{username}}, const std\+::string \&\mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}, const \mbox{\hyperlink{class_date}{Date}} \&\mbox{\hyperlink{class_user_a429fc196d1c50751035e076172d89078}{registration\+Date}})
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_user_ab737d2e40f18acd106afe813d5fd455d}{User}} (const std\+::string \&\mbox{\hyperlink{class_user_aacbb807e514280f69e00bec7d71f3aee}{username}}, const std\+::string \&\mbox{\hyperlink{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}{password}}, const \mbox{\hyperlink{class_date}{Date}} \&\mbox{\hyperlink{class_user_a429fc196d1c50751035e076172d89078}{registration\+Date}}, const \mbox{\hyperlink{class_date}{Date}} \&\mbox{\hyperlink{class_user_a230c91b4de8dc58223956c39dc458671}{last\+Access}})
+\begin{DoxyCompactList}\small\item\em Constructor with parameters including last access. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_a86190e40469975da0b0e31f7c6d5ecd7}\label{class_user_a86190e40469975da0b0e31f7c6d5ecd7} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+User} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_user_a82fee0bfe0a1bcbaa8b0de50ecb1dd65}{print}} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em Outputs the user information. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_user_ac53726c191f2079cc56b3a2bfb375e79}{read}} (std\+::istream \&is)=0
+\begin{DoxyCompactList}\small\item\em Reads user information from a stream. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_user_adbaccd35176609eb4dc41142beb577a2}{clone}} () const =0
+\begin{DoxyCompactList}\small\item\em Creates a copy of the object. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_user_aaf1bf33b7ea083f2b264f3b709ff733e}{get\+Type}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the type of the user (e.\+g., Reader/\+Admin). \end{DoxyCompactList}\item 
+\Hypertarget{class_user_a5e3cec40a1d8da5630456042e38344bb}\label{class_user_a5e3cec40a1d8da5630456042e38344bb} 
+virtual void {\bfseries print\+Filtered} () const
+\begin{DoxyCompactList}\small\item\em Outputs filtered information (not overridden). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_user_a71e9315e5b57f3d4407303e70c61962a}{change\+Pass}} (const std\+::string \&new\+Pass)
+\begin{DoxyCompactList}\small\item\em Changes the user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_user_a059facf47ff70db2bda94e2d7a5d1328}{Add\+Borrow}} (const \mbox{\hyperlink{class_borrow}{Borrow}} \&obj)=0
+\begin{DoxyCompactList}\small\item\em Adds a new borrow record. \end{DoxyCompactList}\item 
+virtual const size\+\_\+t \mbox{\hyperlink{class_user_a01f6ef1cf1eb8178ac1741be778d8794}{get\+Cnt\+Borrow}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the count of current borrows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_user_a48cfdc017b1b335f2355a0d94cc56b3a}{has\+This\+Borrowing\+List}} (const std\+::string \&title) const =0
+\begin{DoxyCompactList}\small\item\em Checks if a title is in the borrowing list. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_user_a90cde1c9bc4f8a19d1d0d44034ddfa4c}{has\+This\+In\+Borrowing\+List\+ID}} (const unsigned ID) const =0
+\begin{DoxyCompactList}\small\item\em Checks if a borrowing with the given ID exists. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_user_a54f37a7739d0d75c0e6788071feafe5f}{remove\+Borrow}} (const std\+::string \&title)=0
+\begin{DoxyCompactList}\small\item\em Removes a borrow by title. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_user_a90053eaaab91f940c48740463bacd352}{has\+Borrowing\+Overdue}} (const \mbox{\hyperlink{class_date}{Date}} \&today) const =0
+\begin{DoxyCompactList}\small\item\em Checks if the user has overdue borrows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_user_a3e78ec159cf9f910c214d113f5b5c168}{Inactive\+User\+Borrowing}} (const \mbox{\hyperlink{class_date}{Date}} \&today) const =0
+\begin{DoxyCompactList}\small\item\em Checks if the user is inactive based on their borrows. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_a0bdca63ed72fc8ffcee690a0119c2104}\label{class_user_a0bdca63ed72fc8ffcee690a0119c2104} 
+const std\+::string \& {\bfseries get\+Username} () const
+\item 
+\Hypertarget{class_user_aee6af833e24993ff1056538c2c34e99c}\label{class_user_aee6af833e24993ff1056538c2c34e99c} 
+const std\+::string \& {\bfseries get\+Password} () const
+\item 
+\Hypertarget{class_user_a29ebe012b9232bc3a204d5172b3df0b0}\label{class_user_a29ebe012b9232bc3a204d5172b3df0b0} 
+const \mbox{\hyperlink{class_date}{Date}} \& {\bfseries get\+Registration\+Date} () const
+\item 
+\Hypertarget{class_user_a4e01caf8227093d089a98345b7b0a24c}\label{class_user_a4e01caf8227093d089a98345b7b0a24c} 
+const \mbox{\hyperlink{class_date}{Date}} \& {\bfseries get\+Last\+Access} () const
+\item 
+\Hypertarget{class_user_a1dfa65bcba3e701f1a43e7221d90e253}\label{class_user_a1dfa65bcba3e701f1a43e7221d90e253} 
+void {\bfseries set\+Username} (const std\+::string \&new\+Username)
+\item 
+\Hypertarget{class_user_ae60636c099ffe66a20a4512ea11e7704}\label{class_user_ae60636c099ffe66a20a4512ea11e7704} 
+void {\bfseries set\+Password} (const std\+::string \&new\+Password)
+\item 
+\Hypertarget{class_user_ae6037a0148dfdb2f6d74bacfe39f585d}\label{class_user_ae6037a0148dfdb2f6d74bacfe39f585d} 
+void {\bfseries set\+Registration\+Date} (const \mbox{\hyperlink{class_date}{Date}} \&new\+Register\+Date)
+\item 
+\Hypertarget{class_user_a705b1cef9c3f655a2fea3b46bca27414}\label{class_user_a705b1cef9c3f655a2fea3b46bca27414} 
+void {\bfseries set\+Last\+Access\+Date} (const \mbox{\hyperlink{class_date}{Date}} \&new\+Last\+Access\+Date)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_user_acfa8db54d997fcd034b474ad6f802d74}{User\+Factory}} (std\+::ifstream \&is)
+\begin{DoxyCompactList}\small\item\em Creates a new user from a stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_user_aacbb807e514280f69e00bec7d71f3aee}\label{class_user_aacbb807e514280f69e00bec7d71f3aee} 
+std\+::string {\bfseries username} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s username. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f}\label{class_user_ac2f2e75b15e8eb6cbb030fc85a6cd59f} 
+std\+::string {\bfseries password} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s password. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_a429fc196d1c50751035e076172d89078}\label{class_user_a429fc196d1c50751035e076172d89078} 
+\mbox{\hyperlink{class_date}{Date}} {\bfseries registration\+Date} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user}{User}\textquotesingle{}s registration date. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_a230c91b4de8dc58223956c39dc458671}\label{class_user_a230c91b4de8dc58223956c39dc458671} 
+\mbox{\hyperlink{class_date}{Date}} {\bfseries last\+Access} \{\}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_date}{Date} of last system access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing a user in the system. 
+
+\label{doc-constructors}
+\Hypertarget{class_user_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_aebf1fa65a1d9b6d9e9b2ccb9622408af}\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_user_aebf1fa65a1d9b6d9e9b2ccb9622408af} 
+User\+::\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username}{, }\item[{const std\+::string \&}]{password}{, }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{registration\+Date}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \doxylink{class_user}{User} name. \\
+\hline
+{\em password} & Password. \\
+\hline
+{\em registration\+Date} & Registration date. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_ab737d2e40f18acd106afe813d5fd455d}\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_user_ab737d2e40f18acd106afe813d5fd455d} 
+User\+::\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username}{, }\item[{const std\+::string \&}]{password}{, }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{registration\+Date}{, }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{last\+Access}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with parameters including last access. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & \doxylink{class_user}{User} name. \\
+\hline
+{\em password} & Password. \\
+\hline
+{\em registration\+Date} & Registration date. \\
+\hline
+{\em last\+Access} & Last access date. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_user_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_a059facf47ff70db2bda94e2d7a5d1328}\index{User@{User}!AddBorrow@{AddBorrow}}
+\index{AddBorrow@{AddBorrow}!User@{User}}
+\doxysubsubsection{\texorpdfstring{AddBorrow()}{AddBorrow()}}
+{\footnotesize\ttfamily \label{class_user_a059facf47ff70db2bda94e2d7a5d1328} 
+virtual void User\+::\+Add\+Borrow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_borrow}{Borrow}} \&}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adds a new borrow record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Object of type \doxylink{class_borrow}{Borrow}. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a7c96f6a68bd5099d7f33af8259f2a5fc}{Admin}}, and \mbox{\hyperlink{class_reader_a8ce3b4147cf04ec12c78319784187916}{Reader}}.
+
+\Hypertarget{class_user_a71e9315e5b57f3d4407303e70c61962a}\index{User@{User}!changePass@{changePass}}
+\index{changePass@{changePass}!User@{User}}
+\doxysubsubsection{\texorpdfstring{changePass()}{changePass()}}
+{\footnotesize\ttfamily \label{class_user_a71e9315e5b57f3d4407303e70c61962a} 
+virtual void User\+::change\+Pass (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Pass}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Changes the user\textquotesingle{}s password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Pass} & New password. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_adbaccd35176609eb4dc41142beb577a2}\index{User@{User}!clone@{clone}}
+\index{clone@{clone}!User@{User}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_user_adbaccd35176609eb4dc41142beb577a2} 
+virtual \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} User\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a copy of the object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new user. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a8e732ea59a61434b3730fbe6e440c4a5}{Admin}}, and \mbox{\hyperlink{class_reader_a4dc2f791d7e6ebd372855b7ffeb13789}{Reader}}.
+
+\Hypertarget{class_user_a01f6ef1cf1eb8178ac1741be778d8794}\index{User@{User}!getCntBorrow@{getCntBorrow}}
+\index{getCntBorrow@{getCntBorrow}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getCntBorrow()}{getCntBorrow()}}
+{\footnotesize\ttfamily \label{class_user_a01f6ef1cf1eb8178ac1741be778d8794} 
+virtual const size\+\_\+t User\+::get\+Cnt\+Borrow (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the count of current borrows. 
+
+
+
+Implemented in \mbox{\hyperlink{class_admin_a701ad7f62b2dfc0dad96945b49490935}{Admin}}, and \mbox{\hyperlink{class_reader_af190e419d6dea35c43dc6cfaaa8433fe}{Reader}}.
+
+\Hypertarget{class_user_aaf1bf33b7ea083f2b264f3b709ff733e}\index{User@{User}!getType@{getType}}
+\index{getType@{getType}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_user_aaf1bf33b7ea083f2b264f3b709ff733e} 
+virtual std\+::string User\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the type of the user (e.\+g., Reader/\+Admin). 
+
+\begin{DoxyReturn}{Returns}
+Type as a string. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a1de3cbdcf126b1bc58f27cff5a708d73}{Admin}}, and \mbox{\hyperlink{class_reader_a24cfa208ec06c12aac6b9e7cec381649}{Reader}}.
+
+\Hypertarget{class_user_a90053eaaab91f940c48740463bacd352}\index{User@{User}!hasBorrowingOverdue@{hasBorrowingOverdue}}
+\index{hasBorrowingOverdue@{hasBorrowingOverdue}!User@{User}}
+\doxysubsubsection{\texorpdfstring{hasBorrowingOverdue()}{hasBorrowingOverdue()}}
+{\footnotesize\ttfamily \label{class_user_a90053eaaab91f940c48740463bacd352} 
+virtual bool User\+::has\+Borrowing\+Overdue (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{today}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the user has overdue borrows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em today} & Today\textquotesingle{}s date. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a196e1f187535fa4c4f7518c9f1a34433}{Admin}}, and \mbox{\hyperlink{class_reader_aaff926a697ae2bc4a68688559b3dd5cf}{Reader}}.
+
+\Hypertarget{class_user_a48cfdc017b1b335f2355a0d94cc56b3a}\index{User@{User}!hasThisBorrowingList@{hasThisBorrowingList}}
+\index{hasThisBorrowingList@{hasThisBorrowingList}!User@{User}}
+\doxysubsubsection{\texorpdfstring{hasThisBorrowingList()}{hasThisBorrowingList()}}
+{\footnotesize\ttfamily \label{class_user_a48cfdc017b1b335f2355a0d94cc56b3a} 
+virtual bool User\+::has\+This\+Borrowing\+List (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if a title is in the borrowing list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title to search for. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a912c6f1244f6365e518c862e8f37be68}{Admin}}, and \mbox{\hyperlink{class_reader_a08488523965f5646d67478bcbf20d0ef}{Reader}}.
+
+\Hypertarget{class_user_a90cde1c9bc4f8a19d1d0d44034ddfa4c}\index{User@{User}!hasThisInBorrowingListID@{hasThisInBorrowingListID}}
+\index{hasThisInBorrowingListID@{hasThisInBorrowingListID}!User@{User}}
+\doxysubsubsection{\texorpdfstring{hasThisInBorrowingListID()}{hasThisInBorrowingListID()}}
+{\footnotesize\ttfamily \label{class_user_a90cde1c9bc4f8a19d1d0d44034ddfa4c} 
+virtual bool User\+::has\+This\+In\+Borrowing\+List\+ID (\begin{DoxyParamCaption}\item[{const unsigned}]{ID}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if a borrowing with the given ID exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & Unique identifier. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a091fe579f8786cc3e5940b369e411eb7}{Admin}}, and \mbox{\hyperlink{class_reader_ab64c9d9ba85a50cc9574eab0bbb66356}{Reader}}.
+
+\Hypertarget{class_user_a3e78ec159cf9f910c214d113f5b5c168}\index{User@{User}!InactiveUserBorrowing@{InactiveUserBorrowing}}
+\index{InactiveUserBorrowing@{InactiveUserBorrowing}!User@{User}}
+\doxysubsubsection{\texorpdfstring{InactiveUserBorrowing()}{InactiveUserBorrowing()}}
+{\footnotesize\ttfamily \label{class_user_a3e78ec159cf9f910c214d113f5b5c168} 
+virtual bool User\+::\+Inactive\+User\+Borrowing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{today}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the user is inactive based on their borrows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em today} & Today\textquotesingle{}s date. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a949dd5f5224cd38c0d287cd8bc292400}{Admin}}, and \mbox{\hyperlink{class_reader_a91611a43b414c730ac88e6e0a8876cb4}{Reader}}.
+
+\Hypertarget{class_user_a82fee0bfe0a1bcbaa8b0de50ecb1dd65}\index{User@{User}!print@{print}}
+\index{print@{print}!User@{User}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_user_a82fee0bfe0a1bcbaa8b0de50ecb1dd65} 
+virtual void User\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Outputs the user information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a5f47fc286c6ad2c73eebb1878ccf9bfc}{Admin}}, and \mbox{\hyperlink{class_reader_ab74ae72ea55f0902fe33f9454e871b95}{Reader}}.
+
+\Hypertarget{class_user_ac53726c191f2079cc56b3a2bfb375e79}\index{User@{User}!read@{read}}
+\index{read@{read}!User@{User}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{class_user_ac53726c191f2079cc56b3a2bfb375e79} 
+virtual void User\+::read (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reads user information from a stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Input stream. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_a457810405cac959c24c6ec375f502b87}{Admin}}, and \mbox{\hyperlink{class_reader_a9d5d82181e5c3690a46c699924898518}{Reader}}.
+
+\Hypertarget{class_user_a54f37a7739d0d75c0e6788071feafe5f}\index{User@{User}!removeBorrow@{removeBorrow}}
+\index{removeBorrow@{removeBorrow}!User@{User}}
+\doxysubsubsection{\texorpdfstring{removeBorrow()}{removeBorrow()}}
+{\footnotesize\ttfamily \label{class_user_a54f37a7739d0d75c0e6788071feafe5f} 
+virtual void User\+::remove\+Borrow (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Removes a borrow by title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title of the item. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_admin_af763ebb254ec5c853b9c4124fb033c0f}{Admin}}, and \mbox{\hyperlink{class_reader_a94daf3f9a7f2c3d6e8768ec63e9319be}{Reader}}.
+
+\Hypertarget{class_user_acfa8db54d997fcd034b474ad6f802d74}\index{User@{User}!UserFactory@{UserFactory}}
+\index{UserFactory@{UserFactory}!User@{User}}
+\doxysubsubsection{\texorpdfstring{UserFactory()}{UserFactory()}}
+{\footnotesize\ttfamily \label{class_user_acfa8db54d997fcd034b474ad6f802d74} 
+\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} User\+::\+User\+Factory (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{is}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a new user from a stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Input file stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the new user. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Stefan/\+Desktop/\+Render\+Doc/User.\+h\item 
+C\+:/\+Users/\+Stefan/\+Desktop/\+Render\+Doc/User.\+cpp\item 
+C\+:/\+Users/\+Stefan/\+Desktop/\+Render\+Doc/User\+Factory.\+cpp\end{DoxyCompactItemize}

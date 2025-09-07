@@ -1,0 +1,25 @@
+var class_user =
+[
+    [ "User", "class_user.html#a4dd5fde1b81bb132994a67f27bc203d1", null ],
+    [ "User", "class_user.html#aebf1fa65a1d9b6d9e9b2ccb9622408af", null ],
+    [ "User", "class_user.html#ab737d2e40f18acd106afe813d5fd455d", null ],
+    [ "~User", "class_user.html#a86190e40469975da0b0e31f7c6d5ecd7", null ],
+    [ "AddBorrow", "class_user.html#a059facf47ff70db2bda94e2d7a5d1328", null ],
+    [ "changePass", "class_user.html#a71e9315e5b57f3d4407303e70c61962a", null ],
+    [ "clone", "class_user.html#adbaccd35176609eb4dc41142beb577a2", null ],
+    [ "getCntBorrow", "class_user.html#a01f6ef1cf1eb8178ac1741be778d8794", null ],
+    [ "getType", "class_user.html#aaf1bf33b7ea083f2b264f3b709ff733e", null ],
+    [ "hasBorrowingOverdue", "class_user.html#a90053eaaab91f940c48740463bacd352", null ],
+    [ "hasThisBorrowingList", "class_user.html#a48cfdc017b1b335f2355a0d94cc56b3a", null ],
+    [ "hasThisInBorrowingListID", "class_user.html#a90cde1c9bc4f8a19d1d0d44034ddfa4c", null ],
+    [ "InactiveUserBorrowing", "class_user.html#a3e78ec159cf9f910c214d113f5b5c168", null ],
+    [ "print", "class_user.html#a82fee0bfe0a1bcbaa8b0de50ecb1dd65", null ],
+    [ "printFiltered", "class_user.html#a5e3cec40a1d8da5630456042e38344bb", null ],
+    [ "read", "class_user.html#ac53726c191f2079cc56b3a2bfb375e79", null ],
+    [ "removeBorrow", "class_user.html#a54f37a7739d0d75c0e6788071feafe5f", null ],
+    [ "UserFactory", "class_user.html#acfa8db54d997fcd034b474ad6f802d74", null ],
+    [ "lastAccess", "class_user.html#a230c91b4de8dc58223956c39dc458671", null ],
+    [ "password", "class_user.html#ac2f2e75b15e8eb6cbb030fc85a6cd59f", null ],
+    [ "registrationDate", "class_user.html#a429fc196d1c50751035e076172d89078", null ],
+    [ "username", "class_user.html#aacbb807e514280f69e00bec7d71f3aee", null ]
+];
