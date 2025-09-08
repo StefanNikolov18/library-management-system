@@ -4,7 +4,7 @@
 This project implements an **interactive library information system** that manages books, periodicals(newslettters), and series, as well as readers and administrators.  
 The system stores data in files, supports authentication, and provides commands for searching, adding, editing, and borrowing items.  
 
-It is designed to handle **large amounts of data** efficiently by not loading all records into memory at once(for some commands it does).
+It is designed to handle **large amounts of data** efficiently by not loading all records into memory at once (for some commands it does).
 The project is developed mainly using **Object-Oriented Programming (OOP)** principles – encapsulation, inheritance, polymorphism, and abstraction.
 
 ---
