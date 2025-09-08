@@ -78,3 +78,6 @@ This makes the system **scalable, maintainable, and easy to extend**.
    ```bash
    git clone https://github.com/StefanNikolov18/library-management-system.git
    cd library-management-system
+
+## Extra
+For full documentation find index.html file in Documentation/html 
