@@ -80,4 +80,4 @@ This makes the system **scalable, maintainable, and easy to extend**.
    cd library-management-system
 
 ## Extra
-  For full documentation find index.html file in Documentation/html 
+ 📖 Full documentation is available in `Documentation/html/index.html`.
