@@ -1,10 +1,11 @@
 # 📚 Library Management System
 
-## Overview
+## ℹ️ Overview
 This project implements an **interactive library information system** that manages books, periodicals(newslettters), and series, as well as readers and administrators.  
 The system stores data in files, supports authentication, and provides commands for searching, adding, editing, and borrowing items.  
 
 It is designed to handle **large amounts of data** efficiently by not loading all records into memory at once.
+The project is developed mainly using **Object-Oriented Programming (OOP)** principles – encapsulation, inheritance, polymorphism, and abstraction.
 
 ---
 
@@ -35,6 +36,16 @@ It is designed to handle **large amounts of data** efficiently by not loading al
 - If no data is found, the system initializes with a default admin account:  
   - **Username:** `admin`  
   - **Password:** `i<3c++`  
+
+---
+## 🛠 OOP Design
+The project follows **OOP principles**:
+- **Encapsulation** → clear separation of data and operations.  
+- **Inheritance** → hierarchy of items (Book, Periodical, Series).  
+- **Polymorphism** → unified handling of different library items.  
+- **Abstraction** → base classes for common functionality.  
+
+This makes the system **scalable, maintainable, and easy to extend**.
 
 ---
 
