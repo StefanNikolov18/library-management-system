@@ -21,7 +21,7 @@ The project is developed mainly using **Object-Oriented Programming (OOP)** prin
 - **Authentication**  
   - `login`, `logout`, user roles (reader / admin)  
 - **Commands**  
-  - Display all items with pagination (`books all`, `series all`, `list all`)  
+  - Display all items with pagination (`books all`, `series all`, `newsletters all`, `list all`)  
   - Search with filtering, sorting, and limiting (`find`, `list info <isbn>`)  
   - Manage users (`user add`, `user remove`, `user change`, `user find`)  
   - Manage items (`add`, `remove`, `change`)  
