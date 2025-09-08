@@ -1,7 +1,7 @@
 # 📚 Library Management System
 
 ## ℹ️ Overview
-This project implements an **interactive library information system** that manages books, periodicals(newslettters), and series, as well as readers and administrators.  
+This project implements an **interactive library information system** that manages books, periodicals(newsletters), and series, as well as readers and administrators.  
 The system stores data in files, supports authentication, and provides commands for searching, adding, editing, and borrowing items.  
 
 It is designed to handle **large amounts of data** efficiently by not loading all records into memory at once (for some commands it does).
@@ -80,5 +80,5 @@ This makes the system **scalable, maintainable, and easy to extend**.
    cd library-management-system
   
 
-## Extra
- 📖 Full documentation is available in `Documentation/html/index.html`.
+## 📖 Documentation
+Full documentation is available in `Documentation/html/index.html`.
