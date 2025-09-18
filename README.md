@@ -1,6 +1,6 @@
-# 📚 Library Management System
+# Library Management System
 
-## ℹ️ Overview
+## Overview
 This project implements an **interactive library information system** that manages books, periodicals (newsletters), and series, as well as readers and administrators.  
 The system stores data in files, supports authentication, and provides commands for searching, adding, editing, and borrowing items.  
 
@@ -9,7 +9,7 @@ The project is developed mainly using **Object-Oriented Programming (OOP)** prin
 
 ---
 
-## ✨ Features
+## Features
 - **Library items**  
   - Books (with author, title, genre, description, publisher, year, ISBN, etc.)  
   - Periodicals (with issue number, articles, ISSN, etc.)  
@@ -30,7 +30,7 @@ The project is developed mainly using **Object-Oriented Programming (OOP)** prin
 
 ---
 
-## 🗂 Data Storage
+## Data Storage
 - Data is stored in **files** (custom text format).  
 - At program startup, data is **loaded and validated**.  
 - If no data is found, the system initializes with a default admin account:  
@@ -38,7 +38,7 @@ The project is developed mainly using **Object-Oriented Programming (OOP)** prin
   - **Password:** `i<3c++`  
 
 ---
-## 🛠 OOP Design
+## OOP Design
 The project follows **OOP principles**:
 - **Encapsulation** → clear separation of data and operations.  
 - **Inheritance** → hierarchy of items (Book, Periodical, Series).  
@@ -49,36 +49,36 @@ This makes the system **scalable, maintainable, and easy to extend**.
 
 ---
 
-## 🛠 Commands
-### 🔑 Authentication
+## Commands
+### Authentication
 - `login` → enter username + password  
 - `logout` → leave the system  
 - `exit` → close the program  
 
-### 📖 Library Items
+### Library Items
 - `books all` / `series all` / `newsletters all` / `list all`  
 - `list info <isbn_value>` → detailed info  
 - `books find <option> <value> [sort <key> [asc|desc]] [top <val>]`  
 - `series find ...`, `newsletters find ...`, `list find ...`  
 
-### 👤 Users
+### Users
 - `user add <user> <password> [admin]`  
 - `user remove <user>`  
 - `user change [<name>]`  
 - `user find <option> <value>`  
 
-### 📦 Borrow & Return
+### Borrow & Return
 - `take <ID>` → borrow item  
 - `return <ID>` → return borrowed item  
 
 ---
 
-## 🚀 Usage
+## Usage
 1. Clone the repository:
    ```bash
    git clone https://github.com/StefanNikolov18/library-management-system.git
    cd library-management-system
   
 
-## 📖 Documentation
+## Documentation
 Full documentation is available in `Documentation/html/index.html`.
