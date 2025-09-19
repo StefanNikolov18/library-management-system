@@ -8,6 +8,8 @@
 #include <string>
 #include "System/System.h"
 #include "Commands/Command.h"
+#include "Options/Options.h"
+//petel
 
  /**
   * @brief Main function to start the application.
@@ -21,8 +23,8 @@ int main() {
 
 	try {
 		// Name of the files
-		 const std::string fileNameBooks = "Books1.txt";
-		 const std::string fileNameUsers = "Users1.txt";
+		 const std::string fileNameBooks = option::fileNames::BOOKSFILENAME;
+		 const std::string fileNameUsers = option::fileNames::USERSFILENAME;
 
 		// Loading files
 		 std::ifstream fileBooks(fileNameBooks, std::ios::in);

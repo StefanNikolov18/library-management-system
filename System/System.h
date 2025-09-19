@@ -5,13 +5,13 @@
 #include "../Users/User.h"
 #include "../Users/Reader.h"
 
+#include "../Options/Options.h"
+
 #include <fstream>
 
-#define MAXSTORING 50 ///< Loads only MAXSTORING number of library items into the system
-#define PAGES 5    ///< Displays only PAGES number of library items on the screen
 
 /// @class System
-/// @brief The main class that manages the library system – users, books, and command processing.
+/// @brief The main class that manages the library system ï¿½ users, books, and command processing.
 /// @brief Contains collections of users and library items.
 class System
 {
@@ -25,7 +25,7 @@ public:
 	System(std::ifstream& isLI, std::ifstream& isUsers,
 		const std::string& fileNameBooks, const std::string& fileNameUsers);
 
-	/// @brief Destructor – releases dynamically allocated memory in the collections.
+	/// @brief Destructor ï¿½ releases dynamically allocated memory in the collections.
 	~System() noexcept;
 
 	/// @brief Deleted copy constructor.
@@ -154,14 +154,14 @@ private:
 	void reset() const;
 
 	/// @brief Loads a specific number of books from file.
-	void loadCountBooks(size_t count = MAXSTORING);
+	void loadCountBooks(size_t count = option::libraryConfig::MAXSTORING);
 
 	/// @brief Resets the display to show the first MAXSTORING books.
 	void resetBooks();
 
 	/// @brief Loads the next portion of books.
 	/// @param count Number of books to load, default is MAXSTORING.
-	bool nextBooks(size_t count = MAXSTORING);
+	bool nextBooks(size_t count = option::libraryConfig::MAXSTORING);
 
 	/// @brief Loads all books from a file into a vector.
 	/// @param list Vector to store all library items from the file.

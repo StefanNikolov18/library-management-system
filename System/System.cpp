@@ -162,7 +162,7 @@ void System::ListLibraryItems(const std::string& type) {
         return;
     }
 
-    size_t i = 0, pageSize = PAGES;
+    size_t i = 0, pageSize = option::libraryConfig::PAGES;
     char choice = 'N';
     do {
         while (i < pageSize && i < list.size()) {
@@ -179,7 +179,7 @@ void System::ListLibraryItems(const std::string& type) {
         std::cout << "Do you want to be shown more (Y/N) : ";
         std::cin >> choice;
         std::cin.ignore();
-        pageSize += PAGES;
+        pageSize += option::libraryConfig::PAGES;
 
     } while (choice == 'Y' || choice == 'y');
 
@@ -203,7 +203,7 @@ void System::ListAllLibraryItems() {
     }
     reset();
 
-    size_t i = 0, pages = PAGES;
+    size_t i = 0, pages = option::libraryConfig::PAGES;
     char choice = 'Y';
     do {
         while (i < pages && i < list.size()) {
@@ -220,7 +220,7 @@ void System::ListAllLibraryItems() {
         std::cout << "Do you want to be shown more (Y/N) : ";
         std::cin >> choice;
         std::cin.ignore();
-        pages += PAGES;
+        pages += option::libraryConfig::PAGES;
 
     } while (choice == 'Y' || choice == 'y');
 
@@ -318,7 +318,7 @@ void System::findItemByOption(const std::string& Type, const std::string& option
         delete item;
     
     try {
-        // Сортиране
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (hasSort) {
             std::sort(filtered.begin(), filtered.end(), [&](LibraryItem* a, LibraryItem* b) {
                 if (sortKey == "title")
