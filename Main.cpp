@@ -9,7 +9,6 @@
 #include "System/System.h"
 #include "Commands/Command.h"
 #include "Options/Options.h"
-//petel
 
  /**
   * @brief Main function to start the application.
